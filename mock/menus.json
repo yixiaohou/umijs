@@ -1,0 +1,66 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "概览111111",
+            "enName": "Dashboard",
+            "icon": "dashboard",
+            "url": "/dashboard"
+        },
+        {
+            "id": 2,
+            "name": "大表格渲染",
+            "enName": "Table",
+            "icon": "table",
+            "url": "/table",
+            "children": [
+                {
+                    "id": 21,
+                    "name": "基础列表",
+                    "enName": "Basic Table",
+                    "url": "/table/basic"
+                },
+                {
+                    "id": 22,
+                    "name": "基础列表2",
+                    "enName": "Basic Table",
+                    "url": "/table/basic/basic2"
+                },
+                {
+                    "id": 23,
+                    "name": "大列表",
+                    "enName": "Big Table",
+                    "url": "/table/big"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "图表",
+            "enName": "chart",
+            "icon": "bar-chart",
+            "url": "/chart"
+        },
+        {
+            "id": 4,
+            "name": "用户中心",
+            "enName": "System",
+            "icon": "setting",
+            "url": "/user",
+            "children": [
+                {
+                    "id": 41,
+                    "name": "用户中心1",
+                    "enName": "User",
+                    "url": "/user/center1"
+                },
+                {
+                    "id": 42,
+                    "name": "用户中心2",
+                    "enName": "Message",
+                    "url": "/user/center2"
+                }
+            ]
+        }
+    ]
+}
