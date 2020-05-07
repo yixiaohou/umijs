@@ -2,1839 +2,1347 @@
   "code": "BSPAPIS",
   "name": "BSP接口组",
   "version": 12,
+  "hashcode": "12sdj21123",
   "apis": {
-    "getUser": {
-      "code": "apiTokenValidate",
-      "name": "获取用户信息",
-      "method": "post",
-      "url": "http://test.m-glory.net/third/login"
-    },
     "apiTokenValidate": {
       "code": "apiTokenValidate",
       "name": "token验证接口",
       "method": "post",
-      "url": "https://test.m-glory.net/third/validate"
+      "url": "http://dev-s.m-glory.net/third/validate"
     },
     "apiRefreshToken": {
       "code": "apiRefreshToken",
       "name": "刷新token",
       "method": "post",
-      "url": "http://test.m-glory.net/third/refreshtoken"
+      "url": "http://dev-s.m-glory.net/third/refreshtoken"
     },
     "apiGetOSSPolicy": {
       "code": "apiGetOSSPolicy",
       "name": "获取OSSpolicy",
       "method": "get",
-      "url": "http://test.m-glory.net/oss/policy"
+      "url": "http://dev.m-glory.net/oss/policy"
     },
     "apiMenus": {
       "code": "apiMenus",
       "name": "获取企业菜单api",
       "method": "get",
-      "url": "http://test.m-glory.net/third/memus"
-    },
-    "getMenuIconurl": {
-      "code": "getMenuIconurl",
-      "name": "获取企业菜单api",
-      "method": "get",
-      "url": "http://test.m-glory.net/third/memus"
+      "url": "http://dev-om.m-glory.net/menus.json"
     },
     "getChannels": {
       "code": "getChannels",
       "name": "获取企业渠道api",
       "method": "post",
-      "url": "http://test.m-glory.net/qnh-order-bsp/base/channel-list"
+      "url": "http://dev.m-glory.net/qnh-stock-bsp/bsp/bspmddata/enterprise/getchannels"
     },
-    "getRegionchannel": {
-      "code": "getRegionchannel",
-      "name": "获取门店渠道api",
+    "getChannelist": {
+      "code": "getChannels",
+      "name": "首页---获取企业渠道api",
       "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/findItemRegionChannel"
-    },
-    "getischannels": {
-      "code": "getischannels",
-      "name": "获取企业已上线渠道api",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-stock-bsp/bsp/bspmddata/enterprise/getischannels"
-    },
-    "dashboarddata": {
-      "code": "dashboarddata",
-      "name": "首页查询api",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-report-bsp/homepage/bspreport/getCorporateHomePage"
-    },
-    "getsaleRanking": {
-      "code": "getsaleRanking",
-      "name": "查看门店销售排行api",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-report-bsp/homepage/bspreport/getStoreSaleRanking"
-    },
-    "getStoreOrders": {
-      "code": "getStoreOrders",
-      "name": "门店首页-获取待处理订单和异常订单api",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bsporder/order/getstoreorders"
-    },
-    "getorderstatusstore": {
-      "code": "getorderstatusstore",
-      "name": "订单简报-查询api",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-report-bsp/order/bspreport/getorderstatusstore"
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/base/common/channel_list"
     },
     "addexport": {
       "code": "addexport",
       "name": "导出到CSV文件api",
       "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/export/add"
-    },
-    "getweekrankings": {
-      "code": "getweekrankings",
-      "name": "商品销售排行-查询api",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-report-bsp/salesdetail/bspreport/getsaleranking"
-    },
-    "getFirstOnlineCategories": {
-      "code": "getFirstOnlineCategories",
-      "name": "获取线上一级分类api",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/onlineCategory/getLevelOnlineCategories"
-    },
-    "getSubOnlineCategories": {
-      "code": "getSubOnlineCategories",
-      "name": "获取线上二级分类api",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/onlineCategory/getLevelOnlineCategories"
+      "url": "http://dev.m-glory.net/qnh-export-bsp/export/add"
     },
     "getStorelist": {
       "code": "getStorelist",
       "name": "获取企业门店列表api",
       "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/getStoreList"
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/store/getnewstorelist"
     },
-    "getwhiteList": {
-      "code": "getwhiteList",
-      "name": "商品白名单-查询api",
+    "getStorelistByCom": {
+      "code": "getStorelistByCom",
+      "name": "获取企业门店列表api通过企业",
       "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/whiteList"
+      "url": "http://dev.m-glory.net/qnh-stock-bsp/bsp/bsporder/order/getstorelist"
     },
-    "getitemregions": {
-      "code": "getitemregions",
-      "name": "获取门店商品列表-查询api",
+    "getentStorelist": {
+      "code": "getentStorelist",
+      "name": "根据企业id获取企业门店列表",
       "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/findItemRegionList"
-    },
-    "setstatus1": {
-      "code": "setstatus",
-      "name": "修改门店商品状态-api",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/updateStatus"
-    },
-    "setstatus2": {
-      "code": "setstatus2",
-      "name": "修改门店商品状态-api",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/updateSaleStatus"
-    },
-    "setstatus3": {
-      "code": "setstatus3",
-      "name": "修改门店商品状态-api",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/updateReceiveStock"
-    },
-    "setstatus4": {
-      "code": "setstatus4",
-      "name": "修改门店商品状态-api",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/updateReceivePrice"
-    },
-    "findItemInfos": {
-      "code": "findItemInfos",
-      "name": "门店商品--稽核-api",
-      "method": "post",
-      "url": "https://test.m-glory.net/jh/mddata/item/findItemInfos"
-    },
-    "onlineinput": {
-      "code": "onlineinput",
-      "name": "商品白名单-导入api",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-import-bsp/bsp/import/itemWhiteImport"
-    },
-    "delWhite": {
-      "code": "delWhite",
-      "name": "移除、恢复商品白名单api",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/updateItemWhite"
-    },
-    "getproblackList": {
-      "code": "getproblackList",
-      "name": "商品黑名单-查询api",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/getItemChannelBlack"
-    },
-    "channelblackInput": {
-      "code": "channelblackInput",
-      "name": "渠道黑名单-导入api",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/imports/inputchannelblack"
-    },
-    "delblack": {
-      "code": "delblack",
-      "name": "移除、恢复渠道黑名单api",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/updateBlack"
-    },
-    "goodsGetchannels": {
-      "code": "goodsGetchannels",
-      "name": "获取渠道",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/getChannelh"
-    },
-    "getsearchresults": {
-      "code": "getsearchresults",
-      "name": "查询配送效率",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-api/order/v1/picktotal"
-    },
-    "getItemList": {
-      "code": "getItemList",
-      "name": "获取线下商品资料",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBaseErp/getItemErps"
-    },
-    "itemBaseStatus": {
-      "code": "itemBaseStatus",
-      "name": "线下商品状态",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-import-bsp/bsp/imports/itemStatusImport"
-    },
-    "getitembaseerplog": {
-      "code": "getitembaseerplog",
-      "name": "线下商品日志",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBaseErp/getItemBaseErpLog"
-    },
-    "getautoshelfs": {
-      "code": "getautoshelfs",
-      "name": "自动上下架-查询api",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/autoShelf/queryAutoshelfList"
-    },
-    "taskonoffinput": {
-      "code": "taskonoffinput",
-      "name": "自动上下架-导入api",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-import-bsp/bsp/import/taskOnOffInput"
-    },
-    "download": {
-      "code": "download",
-      "name": "模板下载api",
-      "method": "get",
-      "url": "http://test.m-glory.net/bsp/bsp/imports/download"
-    },
-    "getitemregionstatus": {
-      "code": "getitemregionstatus",
-      "name": "查看门店商品状态api",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/autoShelf/queryItemRegionStatus"
-    },
-    "batchAllChannel": {
-      "code": "batchAllChannel",
-      "name": "门店商品--批量设置经营渠道",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/itemRegion/batchUpdateJyqd"
-    },
-    "addAutoshelf": {
-      "code": "addAutoshelf",
-      "name": "自动上下架-添加",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/autoShelf/saveAutoshelf"
-    },
-    "getBillOrderConfig": {
-      "code": "getBillOrderConfig",
-      "name": "获取订单配置信息",
-      "method": "get",
-      "url": "http://test.m-glory.net/bsp/bsp/billOrder/getBillOrderConfig"
-    },
-    "entlist": {
-      "code": "entlist",
-      "name": "企业列表",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/enterprise/entlist"
-    },
-    "getchannel": {
-      "code": "getchannel",
-      "name": "渠道信息",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/enterprise/getchannel"
-    },
-    "channels": {
-      "code": "channels",
-      "name": "渠道列表",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/enterprise/channels"
-    },
-    "entupdate": {
-      "code": "entupdate",
-      "name": "更新企业信息",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/enterprise/entupdate"
-    },
-    "delImage": {
-      "code": "delImage",
-      "name": "删除企业logo",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/enterprise/delImage"
-    },
-    "getOrderPickers": {
-      "code": "getOrderPickers",
-      "name": "拣货管理--拣货员信息",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/orderPicker/getOrderPickers"
-    },
-    "queryPickerCategory": {
-      "code": "queryPickerCategory",
-      "name": "拣货管理--获取拣货分类",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/orderPicker/queryPickerCategory"
-    },
-    "savePickerCategory": {
-      "code": "savePickerCategory",
-      "name": "拣货管理--保存拣货分类",
-      "method": "post",
-      "url": " https://test.m-glory.net/bsp/bsp/bspmddata/orderPicker/savePickerCategory"
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/store/getstorelist"
     },
     "queryPickHangUpReason": {
       "code": "savePickerCategory",
       "name": "拣货管理--获取挂起原因列表",
       "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/orderPicker/queryPickHangUpReason"
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/picker/orderPicker/queryPickHangUpReason"
     },
     "savePickHangUpReason": {
       "code": "savePickHangUpReason",
       "name": "拣货管理--保存挂起修改数据",
       "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/orderPicker/savePickHangUpReason"
-    },
-    "pickingHangUpResonSort": {
-      "code": "pickingHangUpResonSort",
-      "name": "拣货管理--保存挂起页面的排序",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/orderPicker/pickingHangUpResonSort"
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/picker/orderPicker/savePickHangUpReason"
     },
     "delPickHangUpReason": {
       "code": "delPickHangUpReason",
       "name": "拣货管理--删除修改数据",
       "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/orderPicker/delPickHangUpReason"
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/picker/orderPicker/delPickHangUpReason"
     },
-    "addOrderPickers": {
-      "code": "addOrderPickers",
-      "name": "拣货管理--新加拣货员信息",
+    "pickingHangUpResonSort": {
+      "code": "pickingHangUpResonSort",
+      "name": "拣货管理--保存挂起页面的排序",
       "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/orderPicker/addOrderPickers"
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/picker/orderPicker/pickingHangUpResonSort"
     },
-    "updOrderPickers": {
-      "code": "updOrderPickers",
-      "name": "拣货管理--修改拣货员信息",
+    "getsearchresults": {
+      "code": "getsearchresults",
+      "name": "查询配送效率",
       "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/orderPicker/updateOrderPickers"
+      "url": "http://dev.m-glory.net/qnh-api/order/v1/picktotal"
     },
-    "updateChannel": {
-      "code": "updateChannel",
-      "name": "门店管理--单个设置渠道",
+    "getitemregions": {
+      "code": "getitemregions",
+      "name": "查看门店商品状态api",
       "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/updateJyqd"
-    },
-    "regionlogs": {
-      "code": "regionlogs",
-      "name": "门店管理--门店商品日志",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/findItemRegionLog"
-    },
-    "inventorychangelog": {
-      "code": "inventorychangelog",
-      "name": "门店管理--查看库存日志",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/findStockLog"
-    },
-    "getchannellogs": {
-      "code": "getchannellogs",
-      "name": "门店管理--查看渠道日志",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/findChannelLog"
-    },
-    "fillstock": {
-      "code": "fillstock",
-      "name": "门店管理--库存置满",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/fullStock"
-    },
-    "getpriceinv": {
-      "code": "getpriceinv",
-      "name": "门店管理--查看库存价格数据",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/findItemPriceStock"
-    },
-    "updateprice": {
-      "code": "updateprice",
-      "name": "门店管理--修改库存商品价格修改",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/updatePriceStock"
-    },
-    "syncOfflineItemPrice": {
-      "code": "syncOfflineItemPrice",
-      "name": "门店管理--同步线下价格",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/syncDownPrice"
-    },
-    "syncOfflineItemStock": {
-      "code": "syncOfflineItemStock",
-      "name": "门店管理--同步线下库存",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/syncDownStock"
-    },
-    "syncOnlineItemPrice": {
-      "code": "syncOfflineItemPrice",
-      "name": "门店管理--同步线上价格",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/syncUpPrice"
-    },
-    "syncOnlineItemStock": {
-      "code": "syncOnlineItemStock",
-      "name": "门店管理--同步线下库存",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/syncUpStock"
-    },
-    "regionPriceStock": {
-      "code": "regionPriceStock",
-      "name": "门店管理--门店商品价格库存导入",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-import-bsp/bsp/itemRegionImport/regionPriceStock"
-    },
-    "goodStatus": {
-      "code": "goodStatus",
-      "name": "门店管理--门店商品状态导入",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-import-bsp/bsp/itemRegionImport/goodStatus"
-    },
-    "onlineChannelInput": {
-      "code": "onlineChannelInput",
-      "name": "门店管理--门店经营渠道导入",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-import-bsp/bsp/itemRegionImport/onlineChannelInput"
-    },
-    "importVipPrice": {
-      "code": "importVipPrice",
-      "name": "门店管理--会员价导入",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-import-bsp/bsp/itemRegionImport/importVipPrice"
-    },
-    "regionPluCode": {
-      "code": "regionPluCode",
-      "name": "门店管理--门店PLU码导入",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-import-bsp/itemRegionImport/regionPluCode"
-    },
-    "itemBaseCxInput": {
-      "code": "itemBaseCxInput",
-      "name": "门店管理--促销商品导入",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-import-bsp/itemRegionImport/ItemBaseCxInput"
-    },
-    "getsotresreport": {
-      "code": "getsotresreport",
-      "name": "财务对账--对账单首页",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-report-bsp/bill/bspreport/getSotreOrderBill"
-    },
-    "getbillingdetails": {
-      "code": "getbillingdetails",
-      "name": "财务对账--对账单详情",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-report-bsp/bill/bspreport/getOrderBill"
-    },
-    "getbillingDetail": {
-      "code": "getbillingDetail",
-      "name": "财务对账--对账单详情--账单详情",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/billOrder/findBillOrdersItemdetail"
-    },
-    "getqnhsettlement": {
-      "code": "getqnhsettlement",
-      "name": "财务对账--商家结算对账表",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-report-bsp/order/bspreport/getbalances"
-    },
-    "getOrderListDetail": {
-      "code": "getOrderListDetail",
-      "name": "财务对账--获取订单详情",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bsporder/order/getorderdetail"
-    },
-    "getEntStorelist": {
-      "code": "getEntStorelist",
-      "name": "财务对账--获取门店",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bsporder/order/getstorelist"
-    },
-    "getStoresReport": {
-      "code": "getStoresReport",
-      "name": "财务对账--获取商城记账单",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/jkl/report"
-    },
-    "getRate": {
-      "code": "getRate",
-      "name": "财务对账--获取费率",
-      "method": "get",
-      "url": "http://test.m-glory.net/bsp/bsp/jkl/getRate"
-    },
-    "saveRate": {
-      "code": "saveRate",
-      "name": "财务对账--设置费率",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/jkl/saveRate"
-    },
-    "exportlist": {
-      "code": "exportlist",
-      "name": "导出任务列表",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/export/exportlist"
-    },
-    "importlist": {
-      "code": "importlist",
-      "name": "导入列表",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/imports/importlist"
-    },
-    "getItemBases": {
-      "code": "getItemBases",
-      "name": "商品资料-查询",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/findItemBaseList"
-    },
-    "geItemLog": {
-      "code": "geItemLog",
-      "name": "商品资料-主档操作日志",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/getItemBaseLog"
-    },
-    "getsole": {
-      "code": "getsole",
-      "name": "商品资料-查询商品参数",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/getEntInfo"
-    },
-    "addItemFiles": {
-      "code": "addItemFiles",
-      "name": "商品资料-单个上传图片",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/addItemFiles"
-    },
-    "getItemFiles": {
-      "code": "getItemFiles",
-      "name": "商品资料-获取上传图片",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/getItemImgFiles"
-    },
-    "getImgesInfo": {
-      "code": "getImgesInfo",
-      "name": "商品资料-拉取图片",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/getWptxImage"
-    },
-    "checkImages": {
-      "code": "checkImages",
-      "name": "商品资料-图片审核-通过、不通过",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/checkImages"
-    },
-    "deleteImg": {
-      "code": "deleteImg",
-      "name": "商品资料-删除图片",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/deleteItemFile"
-    },
-    "showImg": {
-      "code": "showImg",
-      "name": "商品资料-切换主图",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/item/showimg"
-    },
-    "addDetailItemFiles": {
-      "code": "addDetailItemFiles",
-      "name": "商品资料-单个上传详情图片",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/item/addPictureDetails"
-    },
-    "getDetailItemFiles": {
-      "code": "getDetailItemFiles",
-      "name": "商品资料-获取上传详情图片",
-      "method": "get",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/item/getPictureDetails"
-    },
-    "deleteDetailImg": {
-      "code": "deleteDetailImg",
-      "name": "商品资料-删除详情图片",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/item/deletePictureDetails"
-    },
-    "getGoods": {
-      "code": "getGoods",
-      "name": "商品资料-查看商品详情",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/getItemBaseDetail"
-    },
-    "updateGoods": {
-      "code": "updateGoods",
-      "name": "商品资料-修改商品详情",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/updateGoods"
-    },
-    "editDwzhxs": {
-      "code": "editDwzhxs",
-      "name": "商品资料-修改单位转换系数",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/editDwzhxs"
-    },
-    "editjgck": {
-      "code": "editjgck",
-      "name": "商品资料-库存价格查询",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/editJgck"
-    },
-    "updatejgck": {
-      "code": "updatejgck",
-      "name": "商品资料-库存价格修改",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/item/updatejgck"
-    },
-    "alluploadimg": {
-      "code": "alluploadimg",
-      "name": "商品资料-批量上传图片",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/item/addbatchimg"
-    },
-    "batchimportcsv": {
-      "code": "batchimportcsv",
-      "name": "商品资料-批量导入商品图片csv",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/addBatchImg"
-    },
-    "delsign": {
-      "code": "delsign",
-      "name": "商品资料-修改商品状态保存",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/delSign"
-    },
-    "itemBaseImport": {
-      "code": "itemBaseImport",
-      "name": "商品资料-商品资料新增修改导入",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-import-bsp/bsp/itemBase/itemBaseImport"
-    },
-    "xsspflinput": {
-      "code": "xsspflinput",
-      "name": "商品资料-线上商品分类导入",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/imports/xsspflinput"
-    },
-    "itemStatusImport": {
-      "code": "itemStatusImport",
-      "name": "商品资料-售卖状态导入",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-import-bsp/bsp/itemBase/itemStatusImport"
-    },
-    "dwzhxsImport": {
-      "code": "dwzhxsImport",
-      "name": "商品资料-单位转换系数导入",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-import-bsp/bsp/itemBase/dwzhxsImport"
-    },
-    "importMustSaleItem": {
-      "code": "importMustSaleItem",
-      "name": "商品资料-必卖商品导入",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-import-bsp/bsp/itemBase/importMustSaleItem"
-    },
-    "importFreshItem": {
-      "code": "importFreshItem",
-      "name": "商品资料-生鲜商品导入",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-import-bsp/bsp/itemBase/importFreshItem"
-    },
-    "importFoodItem": {
-      "code": "importFoodItem",
-      "name": "商品资料-餐饮商品导入",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-import-bsp/bsp/itemBase/importFoodItem"
-    },
-    "importTaxItem": {
-      "code": "importTaxItem",
-      "name": "商品资料-税码导入",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-import-bsp/bsp/itemBase/importTaxItem"
-    },
-    "importSubTitel": {
-      "code": "importSubTitel",
-      "name": "商品资料-商品副标题导入",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-import-bsp/bsp/itemBase/importSubTitel"
-    },
-    "importPsyq": {
-      "code": "importPsyq",
-      "name": "商品资料-配送要求导入",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-import-bsp/bsp/itemBase/importPsyq"
-    },
-    "updateBarcodeByItemcode": {
-      "code": "updateBarcodeByItemcode",
-      "name": "商品资料-修改商品条码导入",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-import-bsp/bsp/itemBase/updateBarcodeByItemcode"
-    },
-    "batchinvalid": {
-      "code": "batchinvalid",
-      "name": "商品资料-批量操作商品主档状态",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/batchInvalid"
-    },
-    "getWptxImage": {
-      "code": "getWptxImage",
-      "name": "商品资料-批量拉取图片",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/getWptxImage"
-    },
-    "itembasechange": {
-      "code": "itembasechange",
-      "name": "商品资料-单个更改商品状态",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/itemBaseChange"
-    },
-    "isGetWptxImage": {
-      "code": "isGetWptxImage",
-      "name": "商品资料-获取缓存图片类型",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/isGetWptxImage"
-    },
-    "offlineCategoryImport": {
-      "code": "offlineCategoryImport",
-      "name": "商品资料-商品线下分类导入",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-import-bsp/bsp/itemBase/offlineCategoryImport"
-    },
-    "findItems": {
-      "code": "findItems",
-      "name": "商品资料-多规格查询可添加商品",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/specItem/findItems"
-    },
-    "saveSpceItem": {
-      "code": "saveSpceItem",
-      "name": "商品资料-新建保存多规格",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/specItem/saveSpceItem"
-    },
-    "findCategory": {
-      "code": "findCategory",
-      "name": "商品资料-查询伪一级分类",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/specItem/findCategory"
-    },
-    "getitemfiles": {
-      "code": "getitemfiles",
-      "name": "商品资料-修改多规格",
-      "method": "get",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/item/getitemfiles"
-    },
-    "delSpecItem": {
-      "code": "delSpecItem",
-      "name": "商品资料-删除多规格",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/specItem/delSpecItem"
-    },
-    "getuserinfos": {
-      "code": "getuserinfos",
-      "name": "获取用户列表",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/account/getuserinfos"
-    },
-    "changeuserstatus": {
-      "code": "changeuserstatus",
-      "name": "修改用户状态",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/account/changeuserstatus"
-    },
-    "roleList": {
-      "code": "roleList",
-      "name": "角色列表",
-      "memo": "接口返回数据过大，有问题",
-      "method": "post",
-      "url": "https://test.m-glory.net/nodebsp/power/roleList"
-    },
-    "saveuserinfos": {
-      "code": "saveuserinfos",
-      "name": "保存用户",
-      "memo": "新增或保存用户信息",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/account/saveuserinfos"
-    },
-    "removeboundr": {
-      "code": "removeboundr",
-      "name": "解绑用户手机",
-      "memo": "解绑用户手机",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/account/removeboundr"
-    },
-    "edituserinfo": {
-      "code": "edituserinfo",
-      "name": "获取修改用户信息",
-      "memo": "获取修改用户信息",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/account/edituserinfo"
-    },
-    "getQYMenuInfo": {
-      "code": "getQYMenuInfo",
-      "name": "角色权限配置-获取菜单列表",
-      "memo": "接口返回数据过大，有问题",
-      "method": "post",
-      "url": "https://test.m-glory.net/nodebsp/power/qyroleList"
-    },
-    "insertRole": {
-      "code": "insertRole",
-      "name": "角色权限配置-新增角色",
-      "memo": "接口返回数据过大，有问题",
-      "method": "post",
-      "url": "https://test.m-glory.net/nodebsp/power/insertRole"
-    },
-    "updateRole": {
-      "code": "updateRole",
-      "name": "角色权限配置-修改角色",
-      "memo": "接口返回数据过大，有问题",
-      "method": "post",
-      "url": "https://test.m-glory.net/nodebsp/power/updateRole"
-    },
-    "delRole": {
-      "code": "delRole",
-      "name": "角色权限配置-删除角色",
-      "memo": "接口返回数据过大，有问题",
-      "method": "post",
-      "url": "https://test.m-glory.net/nodebsp/power/delRole"
-    },
-    "getentstores": {
-      "code": "getentstores",
-      "name": "获取门店",
-      "memo": "获取门店",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/routeRule/getStoreList"
-    },
-    "updataUserInfo": {
-      "code": "updataUserInfo",
-      "name": "修改配送员信息",
-      "memo": "修改配送员信息",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/account/updataUserInfo"
-    },
-    "getchannelbyendid": {
-      "code": "getchannelbyendid",
-      "name": "获取渠道",
-      "memo": "获取渠道",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/enterprise/getchannelbyendid"
-    },
-    "getentlist": {
-      "code": "getentlist",
-      "name": "获取企业",
-      "memo": "获取企业",
-      "method": "post",
-      "url": "http://test.m-glory.net/jh/omdmain/enterprise/listAll"
-    },
-    "deleteUserInfo": {
-      "code": "deleteUserInfo",
-      "name": "删除用户账号",
-      "memo": "删除用户账号",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/account/deleteUserInfo"
-    },
-    "getlongnameList": {
-      "code": "getlongnameList",
-      "name": "异常商品-名称过长商品查询",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/expetionItem/findItemOfNameOverlength"
-    },
-    "getrenameList": {
-      "code": "getrenameList",
-      "name": "异常商品-重名商品查询",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/expetionItem/findRepetitionList"
-    },
-    "getbynamelist": {
-      "code": "getbynamelist",
-      "name": "异常商品-商品重名-查看详情",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/expetionItem/findItemByName"
-    },
-    "updaterename": {
-      "code": "updaterename",
-      "name": "异常商品-商品重名-查看详情修改保存",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/repetition/saveitemname"
-    },
-    "getitemwatchlist1": {
-      "code": "getitemwatchlist1",
-      "name": "一品多码表-条码多码查询",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemWatch/itemWatchBarcode"
-    },
-    "getitemwatchlist": {
-      "code": "getitemwatchlist",
-      "name": "一品多码表-编码多码查询",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemWatch/itemWatchItemCode"
-    },
-    "getEvaluations": {
-      "code": "getEvaluations",
-      "name": "评价管理--评价管理",
-      "memo": "评价管理--评价管理",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-order-bsp/evaluate/list"
-    },
-    "replyEvaluation": {
-      "code": "replyEvaluation",
-      "name": "评价管理--评价管理",
-      "memo": "评价管理--评价管理",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-order-bsp/evaluate/translate"
-    },
-    "getcoulent": {
-      "code": "getcoulent",
-      "name": "评价管理--获取一开始设置的回复",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-order-bsp/evaluate/getAutoReply"
-    },
-    "saveAutoReply": {
-      "code": "saveAutoReply",
-      "name": "评价管理--保存自动回复",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-order-bsp/evaluate/saveAutoReply"
-    },
-    "queryStoreDelivery": {
-      "code": "queryStoreDelivery",
-      "name": "获取汇总列表",
-      "memo": "获取汇总列表",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/store/queryStoreDelivery"
-    },
-    "findStoreDelivery": {
-      "code": "queryStoreDelivery",
-      "name": "获取汇总列表",
-      "memo": "获取汇总列表",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/store/findStoreDelivery"
-    },
-    "savepsfs": {
-      "code": "savepsfs",
-      "name": "保存配送方式",
-      "memo": "保存配送方式",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/store/storeDelivery"
-    },
-    "getsavepsfj": {
-      "code": "getsavepsfj",
-      "name": "保存psfj",
-      "memo": "保存psfj",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/store/storeCost"
-    },
-    "setStoreLocation": {
-      "code": "setStoreLocation",
-      "name": "设置店铺坐标",
-      "memo": "设置店铺坐标",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/bspmddata/store/setStoreLocation"
-    },
-    "importStoreLocations": {
-      "code": "importStoreLocations",
-      "name": "导入门店坐标",
-      "memo": "导入门店坐标",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-import-bsp/bsp/storeImport/importStoreLocations"
-    },
-    "getitemregionerp": {
-      "code": "getitemregionerp",
-      "name": "商品管理-线下门店商品查询",
-      "memo": "商品管理-线下门店商品查询",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemRegionErp/findItemRegionErpList"
-    },
-    "getitemregionlogs": {
-      "code": "getitemregionlogs",
-      "name": "商品管理-线下门店商品查看线下门店日志",
-      "memo": "商品管理-线下门店商品查看线下门店日志",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/findItemRegionLog"
-    },
-    "getItemRegionLog": {
-      "code": "getItemRegionLog",
-      "name": "商品管理-渠道日志",
-      "memo": "商品管理-渠道日志",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/findChannelLog"
-    },
-    "queryBag": {
-      "code": "queryBag",
-      "name": "商品管理-购物袋线下查询",
-      "memo": "商品管理-购物袋线下查询",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/shoppingBag/queryOfflineBag"
-    },
-    "queryOnlineBag": {
-      "code": "queryOnlineBag",
-      "name": "商品管理-购物袋线上查询",
-      "memo": "商品管理-购物袋线上查询",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-goods-bsp/bsp/shoppingBag/queryOnlineBag"
-    },
-    "importTag": {
-      "code": "importTag",
-      "name": "商品管理-导入",
-      "memo": "商品管理-导入",
-      "method": "post",
-      "url": "http://test.m-glory.net/bsp/bsp/imports/importTag"
-    },
-    "getagreement": {
-      "code": "getagreement",
-      "name": "订单履约--功能设置初始页面",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-order-bsp/management/order/getagreement"
-    },
-    "setagreement": {
-      "code": "setagreement",
-      "name": "订单履约--功能设置保存接口",
-      "method": "post",
-      "url": " https://test.m-glory.net/qnh-order-bsp/management/order/setagreement"
-    },
-    "agreementreport": {
-      "code": "agreementreport",
-      "name": "订单履约--订单履约监控获取详细信息",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-order-bsp/management/order/agreementreport"
-    },
-    "storeDeliveryRange": {
-      "code": "storeDeliveryRange",
-      "name": "门店配送范围",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/storeDeliveryRange"
-    },
-    "queryStoreCoordinate": {
-      "code": "queryStoreCoordinate",
-      "name": "获取渠道",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/queryStoreCoordinate"
-    },
-    "StoreDeliveryRange": {
-      "code": "StoreDeliveryRange",
-      "name": "获取渠道",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bspmddata/store/queryStoreDeliveryRange"
-    },
-    "queryStoreCost": {
-      "code": "queryStoreCost",
-      "name": "获取渠道",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/queryStoreCost"
-    },
-    "saveshippingfee": {
-      "code": "queryStoreCost",
-      "name": "获取渠道",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/queryStoreCost"
-    },
-    "findChannelStore": {
-      "code": "findChannelStore",
-      "name": "门店营业设置页面 列表",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/findChannelStore"
-    },
-    "channelStoreyyStatus": {
-      "code": "channelStoreyyStatus",
-      "name": "门店营业设置页面保存状态",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/channelStoreyyStatus"
-    },
-    "channelStorejyStatus": {
-      "code": "channelStorejyStatus",
-      "name": "门店营业设置页面保存状态",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/channelStorejyStatus"
-    },
-    "channelStoreTime": {
-      "code": "channelStoreTime",
-      "name": "门店营业设置页面保存状态",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/channelStoreTime"
-    },
-    "getorderdetails": {
-      "code": "getorderdetails",
-      "name": "订单管理--订单明细查询",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-order-bsp/management/orderDetail/getOrderDetailList"
-    },
-    "getchargeback": {
-      "code": "getchargeback",
-      "name": "订单管理--退货单列表查询",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-order-bsp/management/orderReturn/getOrderReturnList"
-    },
-    "getreturnlist": {
-      "code": "getreturnlist",
-      "name": "订单管理--退货单详情",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-order-bsp/management/orderReturnDetail/getReturnDetailList"
-    },
-    "afterSaleOrderApprove": {
-      "code": "afterSaleOrderApprove",
-      "name": "订单管理--订单处理驳回",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-oms/order/channelrest/afterSaleOrderApprove"
-    },
-    "confirmReceipt": {
-      "code": "confirmReceipt",
-      "name": "订单管理--订单处理确认收货",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-oms/order/channelrest/confirmReceipt"
-    },
-    "getorders": {
-      "code": "getorders",
-      "name": "订单管理--订单详情查询",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-order-bsp/management/order/getorders"
-    },
-    "getorderslog": {
-      "code": "getorderslog",
-      "name": "订单管理--订单日志",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bsporder/order/getorderslog"
-    },
-    "getorderdetail": {
-      "code": "getorderdetail",
-      "name": "订单管理--订单列表查看详情",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-order-bsp/management/orderDetail/getorderdetail"
-    },
-    "getorderstatus": {
-      "code": "getorderstatus",
-      "name": "订单管理--订单轨迹",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bsporder/order/getorderstatus"
-    },
-    "cancelOrderApprove": {
-      "code": "cancelOrderApprove",
-      "name": "订单管理--审核是否同意取消订单",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-oms/order/channelrest/cancelOrderApprove"
-    },
-    "cancelOrderReason": {
-      "code": "cancelOrderReason",
-      "name": "订单管理--商户主动取消订单获取取消原因",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/mobile/cancelOrderReason"
-    },
-    "cancelorder": {
-      "code": "cancelorder",
-      "name": "订单管理--商户主动取消订单",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-oms/order/channelrest/cancelorder"
-    },
-    "sjLaunchReturnOrder": {
-      "code": "sjLaunchReturnOrder",
-      "name": "订单管理--订单处理部分退",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-oms/order/channelrest/sjLaunchReturnOrder"
-    },
-    "orderReport": {
-      "code": "orderReport",
-      "name": "订单管理--订单对账表查询",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-report-bsp/bill/bspreport/orderMerchantBill"
-    },
-    "storeagreementreport": {
-      "code": "storeagreementreport",
-      "name": "订单履约--门店履约统计",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-order-bsp/management/order/storeagreementreport"
-    },
-    "getscopeactivitys": {
-      "code": "getscopeactivitys",
-      "name": "活动设置--活动列表",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/scope/getscopeactivitys"
-    },
-    "addscopeactivitys": {
-      "code": "addscopeactivitys",
-      "name": "活动设置--新建活动",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/scope/addscopeactivitys"
-    },
-    "getownchannel": {
-      "code": "getownchannel",
-      "name": "活动设置--获取上线渠道",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/scopeActivity/queryOwnChannel"
-    },
-    "newfirstclass": {
-      "code": "newfirstclass",
-      "name": "活动设置--获取新的分类",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/scope/addactivitycategory"
-    },
-    "offlineitem": {
-      "code": "offlineitem",
-      "name": "活动设置--提前下线",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/scope/editscopeactivitys"
-    },
-    "getfllist": {
-      "code": "getfllist",
-      "name": "活动设置--获取上线渠道",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/scope/getactivitycategorys"
-    },
-    "onlineInput": {
-      "code": "onlineInput",
-      "name": "活动设置--获取上线渠道",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-import-bsp/bsp/activityImport/activityCategorysInput"
-    },
-    "savesortorder": {
-      "code": "savesortorder",
-      "name": "活动设置--保存分类",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/scope/sortcategory"
-    },
-    "saveSortOrder": {
-      "code": "saveSortOrder",
-      "name": "商品管理-- 线上分类顺序",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/onlineCategory/saveSortOrder"
-    },
-    "saveItemCategory": {
-      "code": "saveItemCategory",
-      "name": "商品管理--保存商品线上品类",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/onlineCategory/saveItemCategory"
-    },
-    "getpolicy": {
-      "code": "getpolicy",
-      "name": "门店商品--价格库存导入",
-      "method": "post",
-      "url": "https://test.m-glory.net/oss/policy"
-    },
-    "getscopeactivitycategorys": {
-      "code": "getscopeactivitycategorys",
-      "name": "活动设置--保存分类",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/scope/getactivitycategorys"
-    },
-    "getactivitycategorys": {
-      "code": "getactivitycategorys",
-      "name": "商品管理--门店个性分类获取一级分类下的二级分类",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/special/getactivitycategorys"
-    },
-    "getscopeactivityitems": {
-      "code": "getscopeactivityitems",
-      "name": "活动设置--保存分类",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/scope/getactivityitems"
-    },
-    "getactivityitems": {
-      "code": "getactivityitems",
-      "name": "商品管理--门店个性分类获取活动商品列表",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/specialCategory/getActivityItems"
-    },
-    "setselectcategory": {
-      "code": "setselectcategory",
-      "name": "活动设置--保存分类",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/scope/selectcategory"
-    },
-    "getOnlineCategories": {
-      "code": "getOnlineCategories",
-      "name": "商品管理--线上品类查询",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/onlineCategory/getOnlineCategories"
-    },
-    "olctgrinput": {
-      "code": "olctgrinput",
-      "name": "商品管理--线上品类导入",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-import-bsp/bsp/import/olctgrinput"
-    },
-    "updatestockfull": {
-      "code": "updatestockfull",
-      "name": "商品管理--线上品类置满库存",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemRegion/updateStockFull"
-    },
-    "getonlinecategorieslog": {
-      "code": "getonlinecategorieslog",
-      "name": "商品管理--线上品类日志",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/onlineCategory/getOnlineCategoriesLog"
-    },
-    "saveonlinecategory": {
-      "code": "saveonlinecategory",
-      "name": "商品管理--线上品类添加修改保存",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/onlineCategory/saveOnlineCategory"
-    },
-    "deldisableonlinecategory": {
-      "code": "deldisableonlinecategory",
-      "name": "商品管理--线上品类保存顺序",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/onlineCategory/delDisableOnlineCategory"
-    },
-    "editscopeactivitys": {
-      "code": "editscopeactivitys",
-      "name": "商品管理--门店个性分类提交活动上线",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/specialCategory/editScopeActivit"
-    },
-    "delscopeactivity": {
-      "code": "delscopeactivity",
-      "name": "商品管理--门店个性分类删除活动",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/scope/delscopeactivity"
-    },
-    "getownregion": {
-      "code": "getownregion",
-      "name": "商品管理--门店个性分类获取企业门店分组",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/scopeActivity/queryOwnRegion"
-    },
-    "getspecialscopeactivitys": {
-      "code": "getspecialscopeactivitys",
-      "name": "商品管理--门店个性分类列表查询",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/specialCategory/getScopeActivits"
-    },
-    "selectcategory": {
-      "code": "selectcategory",
-      "name": "商品管理--门店个性分类修改商品分类保存",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/specialCategory/selectCategory"
-    },
-    "activityitemcatinput": {
-      "code": "activityitemcatinput",
-      "name": "商品管理--门店个性分类导入商品分类",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/imports/activityitemcatinput"
-    },
-    "findStoreGroup": {
-      "code": "findStoreGroup",
-      "name": "商品管理--门店个性分类获取企业分组列表",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-stock-bsp/bsp/bspmddata/store/findStoreGroup"
-    },
-    "editspecialscopeactivitys": {
-      "code": "editspecialscopeactivitys",
-      "name": "商品管理--门店个性分类新建个性分类保存",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/specialCategory/addScopeActivit"
-    },
-    "removeactivityitem": {
-      "code": "removeactivityitem",
-      "name": "商品管理--门店个性分类删除商品",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/specialCategory/removeActivityItem"
-    },
-    "editactivityitem": {
-      "code": "editactivityitem",
-      "name": "商品管理--门店个性分类修改商品保存",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/specialCategory/editActivityItem"
-    },
-    "addactivitycategory": {
-      "code": "addactivitycategory",
-      "name": "商品管理--门店个性分类新建分类保存",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/special/addactivitycategory"
-    },
-    "addscopeactivitycategory": {
-      "code": "addscopeactivitycategory",
-      "name": "活动设置--获取上线渠道",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/scope/addactivitycategory"
-    },
-    "activitycategorysinput": {
-      "code": "activitycategorysinput",
-      "name": "商品管理--门店个性分类导入商品分类",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/imports/activitycategorysinput"
-    },
-    "sortcategory": {
-      "code": "sortcategory",
-      "name": "商品管理--门店个性分类保存顺序",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/specialCategory/sortCategory"
-    },
-    "queryStoreGroup": {
-      "code": "queryStoreGroup",
-      "name": "门店分组管理-获取分组列表",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/queryStoreGroup"
-    },
-    "findStore": {
-      "code": "findStore",
-      "name": "门店分组管理-查询门店",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/findStore"
-    },
-    "findDistributionStore": {
-      "code": "findDistributionStore",
-      "name": "门店分组管理-获取门店分组列表",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/findDistributionStore"
-    },
-    "delStoreGroup": {
-      "code": "delStoreGroup",
-      "name": "门店分组管理-删除门店分组",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/delStoreGroup"
-    },
-    "promotiononline": {
-      "code": "promotiononline",
-      "name": "单品直降-首页",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotiononline/priceoff/dtos/search"
-    },
-    "operation": {
-      "code": "operation",
-      "name": "单品直降-操作",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotiononline/priceoff/priceoffinfo/save"
-    },
-    "priceoffInfo": {
-      "code": "priceoffInfo",
-      "name": "单品直降-详情",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotiononline/priceoff/infos/search"
-    },
-    "addStore": {
-      "code": "addStore",
-      "name": "单品直降-新增门店",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotiononline/priceoff/stores/add"
-    },
-    "getAddStore": {
-      "code": "getAddStore",
-      "name": "单品直降-新增后门店",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotiononline/priceoff/stores/search"
-    },
-    "deletePushStore": {
-      "code": "deletePushStore",
-      "name": "单品直降-删除新增后门店",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotiononline/priceoff/stores/delete"
-    },
-    "searchCommodity": {
-      "code": "searchCommodity",
-      "name": "单品直降-查询商品",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotiononline/priceoff/regions/items/search"
-    },
-    "addSearchCommodity": {
-      "code": "addSearchCommodity",
-      "name": "单品直降-添加商品",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotiononline/priceoff/items/add"
-    },
-    "searchPushCommodity": {
-      "code": "searchPushCommodity",
-      "name": "单品直降-新增后商品",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotiononline/priceoff/items/search"
-    },
-    "deletePushCommodity": {
-      "code": "deletePushCommodity",
-      "name": "单品直降-批量删除商品",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotiononline/priceoff/items/delete"
-    },
-    "deleteCommodity": {
-      "code": "deleteCommodity",
-      "name": "单品直降-单个删除商品",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotiononline/priceoff/item/delete"
-    },
-    "compilePushPrice": {
-      "code": "compilePushPrice",
-      "name": "单品直降-批量修改折扣/活动价",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotiononline/priceoff/items/update"
-    },
-    "singlepromotelist": {
-      "code": "singlepromotelist",
-      "name": "线下单品促销-促销列表",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotionitems/list"
-    },
-    "updItemStateUrl": {
-      "code": "updItemStateUrl",
-      "name": "线下单品促销-单个修改商品状态",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotionitems/updItemState"
-    },
-    "updPromotionStateUrl": {
-      "code": "updPromotionStateUrl",
-      "name": "线下单品促销-批量修改商品状态",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotionitems/updPromotionState"
-    },
-    "gettypesUrl": {
-      "code": "gettypesUrl",
-      "name": "商品促销类型表-促销类型",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotion/promotetype/getPromotionType"
-    },
-    "alluploadimgoss": {
-      "code": "alluploadimgoss",
-      "name": "门店商品--批量上传图片",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-goods-bsp/bsp/itemBase/addBatchImg"
-    },
-    "addBatchPictureDetails": {
-      "code": "addBatchPictureDetails",
-      "name": "门店商品--批量上传详情图片",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/item/addBatchPictureDetails"
-    },
-    "getpromotionslistsurl": {
-      "code": "getpromotionslistsurl",
-      "name": "商品促销类型表-促销列表",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/promotion/promotetype/findItemPromotionType"
-    },
-    "getlistchannels": {
-      "code": "getlistchannels",
-      "name": "门店列表页面-获取渠道",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/enterprise/getlistchannels"
-    },
-    "getstorealist": {
-      "code": "getstorealist",
-      "name": "门店列表页面-获取门店",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bsporder/order/getstorealist"
-    },
-    "getstores": {
-      "code": "getstores",
-      "name": "门店列表页面-获取门店",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/getstores"
-    },
-    "getstorecount": {
-      "code": "getstorecount",
-      "name": "门店列表页面-获取门店数量",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/getstorecount"
-    },
-    "getstoreslog": {
-      "code": "getstoreslog",
-      "name": "门店列表页面-获取门店日志",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/getstoreslog"
-    },
-    "storePhone": {
-      "code": "storePhone",
-      "name": "门店列表页面-设置电话号码",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/storePhone"
-    },
-    "addstore": {
-      "code": "addstore",
-      "name": "门店列表页面-添加门店",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/addstore"
-    },
-    "storeChannelInput": {
-      "code": "storeChannelInput",
-      "name": "门店列表页面-批量绑定门店导入",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-import-bsp/bsp/storeImport/storeChannelInput"
-    },
-    "storeInput": {
-      "code": "storeInput",
-      "name": "门店列表页面-门店导入",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-import-bsp/bsp/storeImport/storeInput"
-    },
-    "editstore": {
-      "code": "storeInput",
-      "name": "门店列表页面-门店编辑修改",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/editstore"
-    },
-    "updatestore": {
-      "code": "updatestore",
-      "name": "门店列表页面-更新门店信息",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/updatestore"
-    },
-    "initstore": {
-      "code": "initstore",
-      "name": "门店列表页面-门店初始化",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/initstore"
-    },
-    "delchannel": {
-      "code": "delchannel",
-      "name": "门店列表页面-删除渠道",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/store/delchannel"
-    },
-    "queryStoreSetLog": {
-      "code": "queryStoreSetLog",
-      "name": "门店列表页面-查询门店设置日志",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/mobile/queryStoreSetLog"
-    },
-    "getsaledayinfo": {
-      "code": "getsaledayinfo",
-      "name": "运营统计-当日销售简报",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspreport/saleday/getsaledayinfo"
-    },
-    "getsaledayrecon": {
-      "code": "getsaledayrecon",
-      "name": "运营统计-每日销售对账查询",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspreport/saleday/getsaledayrecon"
-    },
-    "getwriteoffday": {
-      "code": "getwriteoffday",
-      "name": "运营统计-每日核销简报查询",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspreport/saleday/getwriteoffday"
-    },
-    "getwriteoffdayField": {
-      "code": "getwriteoffdayField",
-      "name": "运营统计-每日核销简报导出",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspreport/saleday/getwriteoffdayField"
-    },
-    "getfinanceorderreport": {
-      "code": "getfinanceorderreport",
-      "name": "运营统计-各店结算表查询",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-report-bsp/order/bspreport/getfinanceorderreport"
-    },
-    "getregions": {
-      "code": "getregions",
-      "name": "基础设置-单个商品同步",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/one/getregions"
-    },
-    "onegoodsadd": {
-      "code": "onegoodsadd",
-      "name": "基础设置-单个商品同步-添加商品",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/one/onegoodsadd"
-    },
-    "onegoodsedit": {
-      "code": "onegoodsedit",
-      "name": "基础设置-单个商品同步-更新商品",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/one/onegoodsedit"
-    },
-    "onegoodsprice": {
-      "code": "onegoodsprice",
-      "name": "基础设置-单个商品同步-更新商品价格",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/one/onegoodsprice"
-    },
-    "onegoodsstock": {
-      "code": "onegoodsstock",
-      "name": "基础设置-单个商品同步-更新商品库存",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/one/onegoodsstock"
-    },
-    "onegoodsonoff": {
-      "code": "onegoodsonoff",
-      "name": "基础设置-单个商品同步-更新商品上下架状态",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/one/onegoodsonoff"
-    },
-    "getents": {
-      "code": "getents",
-      "name": "单个分类同步-获取企业列表",
-      "method": "post",
-      "url": "https://test.m-glory.net/jh/omdmain/enterprise/listAll"
-    },
-    "categoryadd": {
-      "code": "categoryadd",
-      "name": "单个分类同步-添加单个分类",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/one/categoryadd"
-    },
-    "categoryedit": {
-      "code": "categoryedit",
-      "name": "单个分类同步-更新单个分类",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/one/categoryedit"
-    },
-    "categorydel": {
-      "code": "categorydel",
-      "name": "单个分类同步-删除单个分类",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspmddata/one/categorydel"
-    },
-    "enterpriseGetchannels": {
-      "code": "enterpriseGetchannels",
-      "name": "促销活动分摊报表--活动渠道",
-      "method": "post",
-      "url": "https://test.m-glory.net/base/channel-list"
-    },
-    "moneyDistributionReport": {
-      "code": "moneyDistributionReport",
-      "name": "促销活动分摊报表--分摊报表",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-report-bsp/distribution/bspreport/moneyDistributionReport"
-    },
-    "getshopswitchrecord": {
-      "code": "getshopswitchrecord",
-      "name": "基础设置-当前门店营业状态--列表",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspshop/shop/getshopswitchrecord"
-    },
-    "getshopswitchrecords": {
-      "code": "getshopswitchrecords",
-      "name": "基础设置-门店开关店报表--列表",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/bspshop/shop/getshopswitchrecords"
-    },
-    "getstocks": {
-      "code": "getstocks",
-      "name": "门店库存管理-",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-stock-bsp/bsp/bspstock/stock/getstocks"
-    },
-    "updateStock": {
-      "code": "updateStock",
-      "name": "门店库存管理-",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-stock-bsp/bsp/bspstock/stock/updatestock"
-    },
-    "getstockslog": {
-      "code": "getstockslog",
-      "name": "门店库存管理-库存日志",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-stock-bsp/bsp/bspstock/stock/getstockslog"
-    },
-    "safeStockImport": {
-      "code": "safeStockImport",
-      "name": "门店库存管理-门店安全库存导入",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-import-bsp/bsp/safeStockImport"
-    },
-    "getmonthunsaleitem": {
-      "code": "getmonthunsaleitem",
-      "name": "运营统计-月无销量报表查询",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-report-bsp/salesdetail/bspreport/getmonthunsaleitem"
-    },
-    "getfreshstocks": {
-      "code": "getfreshstocks",
-      "name": "门店库存管理-获取生鲜库存",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-stock-bsp/bsp/bspstock/stock/getfreshstocks"
-    },
-    "getfreshstocksdetail": {
-      "code": "getfreshstocksdetail",
-      "name": "门店库存管理-获取生鲜库存详情",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-stock-bsp/bsp/bspstock/stock/getfreshstocksdetail"
-    },
-    "getInvoicelist": {
-      "code": "getInvoicelist",
-      "name": "门店库存管理-发票信息维护",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/invoice/list/search"
-    },
-    "getInvoicedetail": {
-      "code": "getInvoicedetail",
-      "name": "门店库存管理-获取发票详情信息",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/invoice/search"
-    },
-    "getswitchcompany": {
-      "code": "getswitchcompany",
-      "name": "门店库存管理-启停用发票公司",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/invoice/company/switch"
-    },
-    "addInvoiceCompany": {
-      "code": "addInvoiceCompany",
-      "name": "门店库存管理-增加发票公司",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/invoice/insert"
-    },
-    "updateInvoiceCompany": {
-      "code": "updateInvoiceCompany",
-      "name": "门店库存管理-修改发票公司",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/invoice/update"
-    },
-    "switchInvoice": {
-      "code": "switchInvoice",
-      "name": "门店库存管理-是否启用电子发票",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/invoice/e_region/switch"
-    },
-    "batchSwitch": {
-      "code": "batchSwitch",
-      "name": "门店库存管理-批量修改电子发票信息",
-      "method": "post",
-      "url": "https://test.m-glory.net/bsp/bsp/invoice/e_region/batchSwitch"
-    },
-    "getwillsellstocks": {
-      "code": "getwillsellstocks",
-      "name": "必卖商品-必卖",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-stock-bsp/bsp/bspstock/stock/getwillsellstocks"
-    },
-    "getwillsellstocksdetail": {
-      "code": "getwillsellstocksdetail",
-      "name": "必卖商品-必卖商品详情",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-stock-bsp/bsp/bspstock/stock/getwillsellstocksdetail"
-    },
-    "getsaledetailmonth": {
-      "code": "getsaledetailmonth",
-      "name": "运营统计-类别周销售明细",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-report-bsp/salesdetail/bspreport/getsaledetailmonth"
-    },
-    "getsaledetailtime": {
-      "code": "getsaledetailtime",
-      "name": "运营统计-类别周销售明细",
-      "method": "post",
-      "url": "https://test.m-glory.net/qnh-report-bsp/salesdetail/bspreport/getsaledetailtime"
-    },
-    "importYZDelivery": {
-      "code": "importYZDelivery",
-      "name": "门店商品-配送渠道导入",
-      "method": "post",
-      "url": "http://test.m-glory.net/qnh-import-bsp/bsp/itemRegionImport/importYZDelivery"
+      "url": "http://dev.m-glory.net/qnh-goods-bsp/bsp/itemRegion/findItemRegionList"
     },
     "abnormalGoodsList": {
       "code": "abnormalGoodsList",
       "name": "商品异常清单",
       "method": "post",
-      "url": "http://test.m-glory.net/qnh-operate-bsp/channelErrorRetry/list"
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/channelErrorRetry/list"
+    },
+    "getBillOrderConfig": {
+      "code": "getBillOrderConfig",
+      "name": "获取订单配置信息",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/ent/getBillOrderConfig"
+    },
+    "entlist": {
+      "code": "entlist",
+      "name": "企业列表",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/ent/entlist"
+    },
+    "entupdate": {
+      "code": "entupdate",
+      "name": "修改企业推送配置",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/ent/entupdate"
+    },
+    "exportlist": {
+      "code": "exportlist",
+      "name": "导出任务列表",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-stock-bsp/bsp/export/exportlist"
+    },
+    "importlist": {
+      "code": "importlist",
+      "name": "导入列表",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-stock-bsp/bsp/imports/importlist"
+    },
+    "getUser": {
+      "code": "getUser",
+      "name": "获取用户列表",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/account/getUser"
+    },
+    "addUser": {
+      "code": "addUser",
+      "name": "新增用户列表",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/account/addUser"
+    },
+    "getUserDetail": {
+      "code": "getUserDetail",
+      "name": "获取用户详细信息",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/account/edituserinfo"
+    },
+    "updateBatchUser": {
+      "code": "updateBatchUser",
+      "name": "修改用户状态",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/account/updateBatchUser"
+    },
+    "menuList": {
+      "code": "menuList",
+      "name": "获取菜单列表",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/menu/menuList"
+    },
+    "getQYMenuInfo": {
+      "code": "getQYMenuInfo",
+      "name": "获取角色列表",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/role/getRoleByEnt"
+    },
+    "findPowerModelInfo": {
+      "code": "findPowerModelInfo",
+      "name": "获取权限模板列表接口",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/power/findPowerModelInfo"
+    },
+    "insertPowermodel": {
+      "code": "insertPowermodel",
+      "name": "新增权限模板接口",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/power/insertPowermodel"
+    },
+    "updatePowermodel": {
+      "code": "updatePowermodel",
+      "name": "修改权限模板接口",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/power/updatePowermodel"
+    },
+    "updateRole": {
+      "code": "updateRole",
+      "name": "获取角色列表",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/role/updateRole"
+    },
+    "delRole": {
+      "code": "delRole",
+      "name": "获取角色列表",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/role/delRole"
+    },
+    "insertRole": {
+      "code": "insertRole",
+      "name": "新加角色",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/role/insertRole"
+    },
+    "getAllRoleByEnt": {
+      "code": "getAllRoleByEnt",
+      "name": "获取角色列表",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/role/getAllRoleByEnt"
+    },
+    "ordersummaryreport": {
+      "code": "ordersummaryreport",
+      "name": "获取结账报表",
+      "memo": "获取结账报表",
+      "method": "post",
+      "url": "http://stg-om.m-glory.net/qnh-operate-bsp/bill/orderbill/ordersummaryreport"
+    },
+    "appinfoadd": {
+      "code": "appinfoadd",
+      "name": "新增app信息",
+      "memo": "新增app信息",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/app/addAppInfo"
+    },
+    "findAppInfo": {
+      "code": "findAppInfo",
+      "name": "查询app信息",
+      "memo": "查询app信息",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/app/findAppInfo"
+    },
+    "changeAppInfo": {
+      "code": "changeAppInfo",
+      "name": "修改app信息",
+      "memo": "修改app信息",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/app/changeAppInfo"
+    },
+    "addAppApiDic": {
+      "code": "addAppApiDic",
+      "name": "添加api信息",
+      "memo": "添加api信息",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/app/addAppApiDic"
+    },
+    "findAppApiDic": {
+      "code": "findAppApiDic",
+      "name": "查询api信息",
+      "memo": "查询api信息",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/app/findAppApiDic"
+    },
+    "changeAppApiDic": {
+      "code": "changeAppApiDic",
+      "name": "查询api信息",
+      "memo": "查询api信息",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/app/changeAppApiDic"
+    },
+    "openApiGetList": {
+      "code": "openApiGetList",
+      "name": "查询OPENAPI信息",
+      "memo": "查询OPENAPI信息",
+      "method": "get",
+      "url": "http://dev-om.m-glory.net/qnh-openapi-console/auth/getList"
+    },
+    "openApiAddAuth": {
+      "code": "openApiAddAuth",
+      "name": "添加OPENAPI信息",
+      "memo": "添加OPENAPI信息",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-openapi-console/auth/addAuth"
+    },
+    "openApiUpdateAuth": {
+      "code": "openApiUpdateAuth",
+      "name": "添加OPENAPI信息",
+      "memo": "添加OPENAPI信息",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-openapi-console/auth/updateAuth"
+    },
+    "addAppApiGroup": {
+      "code": "addAppApiGroup ",
+      "name": "添加api组信息",
+      "memo": "添加api组信息",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/app/addAppApiGroup"
+    },
+    "changeAppApiGroup": {
+      "code": "changeAppApiGroup ",
+      "name": "修改api组信息",
+      "memo": "修改api组信息",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/app/changeAppApiGroup"
+    },
+    "changeAppApiGroupDetail": {
+      "code": "changeAppApiGroupDetail ",
+      "name": "修改api组明细",
+      "memo": "修改api组明细",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/app/changeAppApiGroupDetail"
+    },
+    "findAppApiGroup": {
+      "code": "findAppApiGroup ",
+      "name": "查询api组",
+      "memo": "查询api组",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/app/findAppApiGroup"
+    },
+    "listAll": {
+      "code": "listAll ",
+      "name": "获取企业列表",
+      "method": "get",
+      "url": "http://dev.m-glory.net/qnh-jh-boot/omdmain/enterprise/listAll"
+    },
+    "getstorealist": {
+      "code": "getstorealist ",
+      "name": "获取门店列表",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-stock-bsp/bsp/bsporder/order/getstorealist"
+    },
+    "getStoreSaleReport": {
+      "code": "getStoreSaleReport ",
+      "name": "获取门店销售报表",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/sale/getStoreSaleReport"
+    },
+    "getItemSaleReport": {
+      "code": "getItemSaleReport ",
+      "name": "获取商品销售明细报表",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/sale/getItemSaleReport"
+    },
+    "getItemClassifySaleReport": {
+      "code": "getItemClassifySaleReport ",
+      "name": "获取商品销售分类明细报表",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/sale/getItemClassifySaleReport"
+    },
+    "getoperatereport": {
+      "code": "getoperatereport ",
+      "name": "首页获取列表数据",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/base/common/getoperatereport"
+    },
+    "addDiscType": {
+      "code": "addDiscType ",
+      "name": "添加字典头描述表",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/addDiscType"
+    },
+    "findDiscType": {
+      "code": "findDiscType",
+      "name": "查询字典头描述表",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/findDiscType"
+    },
+    "findAllDiscType": {
+      "code": "findAllDiscType",
+      "name": "查询全部字典头描述表",
+      "method": "get",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/findAllDiscType"
+    },
+    "editDiscType": {
+      "code": "editDiscType",
+      "name": "字典头描述信息修改",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/editDiscType"
+    },
+    "delDiscType": {
+      "code": "delDiscType",
+      "name": "字典头描述信息删除",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/delDiscType "
+    },
+    "addDiscTypeDetail": {
+      "code": "addDiscTypeDetail",
+      "name": "字典头描述信息明细添加",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/addDiscTypeDetail"
+    },
+    "findDiscTypeDetail": {
+      "code": "findDiscTypeDetail",
+      "name": "字典头描述信息明细查询",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/findDiscTypeDetail"
+    },
+    "editDiscTypeDetail": {
+      "code": "editDiscTypeDetail",
+      "name": "字典头描述信息明细修改",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/editDiscTypeDetail"
+    },
+    "delDiscTypeDetail": {
+      "code": "delDiscTypeDetail",
+      "name": "字典头描述信息明细删除",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/delDiscTypeDetail"
+    },
+    "findAllDiscTypeDetail": {
+      "code": "findAllDiscTypeDetail",
+      "name": "查询某字典全部描述信息明细查询",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/findAllDiscTypeDetail"
+    },
+    "addDict": {
+      "code": "addDict",
+      "name": "字典添加",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/addDict"
+    },
+    "findDict": {
+      "code": "findDict",
+      "name": "字典查询",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/findDict"
+    },
+    "editDict": {
+      "code": "editDict",
+      "name": "字典修改",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/editDict"
+    },
+    "delDict": {
+      "code": "delDict",
+      "name": "字典删除",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/delDict"
+    },
+    "getConfigDetail": {
+      "code": "getConfigDetail",
+      "name": "查询配置表header数据",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-configuration-boot/cfgDetail/getDetailList"
+    },
+    "addConfigDetail": {
+      "code": "addConfigDetail",
+      "name": "新增配置表header数据",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-configuration-boot/cfgDetail/addDetail"
+    },
+    "updateConfigDetail": {
+      "code": "updateConfigDetail",
+      "name": "修改配置表header数据",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-configuration-boot/cfgDetail/updateDetail"
+    },
+    "delConfigDetail": {
+      "code": "delConfigDetail",
+      "name": "删除配置表header数据",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-configuration-boot/cfgDetail/deleteDetail"
+    },
+    "getConfigHeader": {
+      "code": "getConfigHeader",
+      "name": "查询配置项数据",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-configuration-boot/cfgHeader/getHeaderList"
+    },
+    "addConfigHeader": {
+      "code": "addConfigHeader",
+      "name": "新增配置项数据",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-configuration-boot/cfgHeader/addHeader"
+    },
+    "updateConfigHeader": {
+      "code": "updateConfigHeader",
+      "name": "修改配置项数据",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-configuration-boot/cfgHeader/updateHeader"
+    },
+    "delConfigHeader": {
+      "code": "delConfigHeader",
+      "name": "删除配置项数据",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-configuration-boot/cfgHeader/deleteHeader"
+    },
+    "getHeaderByDict": {
+      "code": "getHeaderByDict",
+      "name": "根据字典Dict查配置表header数据",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-configuration-boot/cfgHeader/getHeaderByDict"
+    },
+    "addConfigResult": {
+      "code": "addConfigResult",
+      "name": "保存配置表header数据",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-configuration-boot/cfgResult/addResult"
+    },
+    "updateConfigResult": {
+      "code": "updateConfigResult",
+      "name": "修改配置表header数据",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-configuration-boot/cfgResult/updateResult"
+    },
+    "getConfigResult": {
+      "code": "getConfigResult",
+      "name": "根据字典Dict查配置表header数据",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-configuration-boot/cfgResult/getResult"
+    },
+    "getaddEnterprise": {
+      "code": "getaddEnterprise",
+      "name": "新增商家基本信息",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-operate-enterprise/enterprise/addEnterprise"
+    },
+    "getEnterprise": {
+      "code": "getEnterprise",
+      "name": "查看商家基本信息",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-operate-enterprise/enterprise/getEnterprise"
+    },
+    "getupdateEnterprise": {
+      "code": "getupdateEnterprise",
+      "name": "更新商家基本信息",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-operate-enterprise/enterprise/updateEnterprise"
+    },
+    "getselectList": {
+      "code": "getselectList",
+      "name": "查询商家列表",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-operate-enterprise/enterprise/selectList"
+    },
+    "getselectConfigList": {
+      "code": "getselectConfigList",
+      "name": "查询商家配置参数",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-operate-enterprise/enterpriseConfig/selectConfigList"
+    },
+    "getsaveEnterpriseConfig": {
+      "code": "getsaveEnterpriseConfig",
+      "name": "保存商家配置参数",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-operate-enterprise/enterpriseConfig/saveEnterpriseConfig"
+    },
+    "getProducts": {
+      "code": "getProducts",
+      "name": "商家使用产品",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-operate-enterprise/operate/product/getProducts"
+    },
+    "getsaveProducts": {
+      "code": "getsaveProducts",
+      "name": "商家保存使用产品",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-operate-enterprise/operate/product/saveProducts"
+    },
+    "getmanageChannels": {
+      "code": "getmanageChannels",
+      "name": "商家获取所有渠道",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-operate-enterprise/operate/channel/getChannels"
+    },
+    "getsaveChannels": {
+      "code": "getsaveChannels",
+      "name": "保存商家所有渠道",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-operate-enterprise/operate/channel/saveChannels"
+    },
+    "getSearchDataSource": {
+      "code": "getSearchDataSource",
+      "name": "获取所有产品渠道",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-operate-enterprise/operate/home/getSearchDataSource"
+    },
+    "getProvinceCity": {
+      "code": "getProvinceCity",
+      "name": "省市联动",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-operate-enterprise/operate/home/getProvinceCity"
+    },
+    "findDictLogs": {
+      "code": "findDictLogs",
+      "name": "根据字典类型查询历史日志",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/findDictLogs"
+    },
+    "findDiscTypeDetailLogs": {
+      "code": "findDiscTypeDetailLogs",
+      "name": "根据设置数据项查询历史日志",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/findDiscTypeDetailLogs"
+    },
+    "findDiscTypeLogs": {
+      "code": "findDiscTypeLogs",
+      "name": "根据字典类型查询详细日志",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-dict/dict/findDiscTypeLogs"
+    },
+    "orderpushconfiglist": {
+      "code": "orderpushconfiglist",
+      "name": "订单推送配置查询列表",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/management/push/list"
+    },
+    "orderpushconfigedit": {
+      "code": "orderpushconfigedit",
+      "name": "订单推送配置修改保存",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/management/push/save"
+    },
+    "geterps": {
+      "code": "geterps",
+      "name": "ERP列表",
+      "method": "get",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/geterps"
+    },
+    "getdelerpinfo": {
+      "code": "getdelerpinfo",
+      "name": "ERP列表-删除",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/delerpinfo"
+    },
+    "getadderpinfo": {
+      "code": "getadderpinfo",
+      "name": "ERP列表-保存",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/adderpinfo"
+    },
+    "geterpinfo": {
+      "code": "geterpinfo",
+      "name": "ERP列表-详情",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/geterpinfo"
+    },
+    "getlogsinfo": {
+      "code": "getlogsinfo",
+      "name": "前置机客户端日志-查询",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/getlogsinfo"
+    },
+    "getqzjserverlogs": {
+      "code": "getqzjserverlogs",
+      "name": "前置机服务端日志-查询",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/getqzjserverlogs"
+    },
+    "getqzjservercount": {
+      "code": "getqzjservercount",
+      "name": "前置机服务端日志-查询count",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/getqzjservercount"
+    },
+    "getQzjVersions": {
+      "code": "getQzjVersions",
+      "name": "前置机版本信息-查询",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/qzjVersion/getQzjVersions"
+    },
+    "getQzjErrors": {
+      "code": "getQzjErrors",
+      "name": "前置机异常任务报表-查询",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/qzjVersion/getQzjErrors"
+    },
+    "getQzjSqlexec": {
+      "code": "getQzjSqlexec",
+      "name": "前置机脚本执行效率-查询",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/getQzjSqlexec"
+    },
+    "getQzjListener": {
+      "code": "getQzjListener",
+      "name": "前置机监控-查询",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/qzjVersion/getQzjListener"
+    },
+    "getQzjCheck": {
+      "code": "getQzjCheck",
+      "name": "前置机任务监控报表-查询",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/getQzjCheck"
+    },
+    "getTaskProblem": {
+      "code": "getTaskProblem",
+      "name": "前置机异常信息报表-任务异常",
+      "method": "get",
+      "url": "http://dev.m-glory.net/qnh-check/qnh/check/getTaskProblem"
+    },
+    "getMachineProblem": {
+      "code": "getMachineProblem",
+      "name": "前置机异常信息报表-机器异常",
+      "method": "get",
+      "url": "http://dev.m-glory.net/qnh-check/qnh/check/getMachineProblem"
+    },
+    "getEntList": {
+      "code": "getEntList",
+      "name": "前置机企业",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-check/qnh/check/getEntList"
+    },
+    "getQzjRunningInfo": {
+      "code": "getQzjRunningInfo",
+      "name": "前置机故障统计报表-查询",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-check/qnh/check/getQzjRunningInfo"
+    },
+    "getinfos": {
+      "code": "getinfos",
+      "name": "前置机任务配置列表-查询",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/getinfos"
+    },
+    "getreceive": {
+      "code": "getreceive",
+      "name": "前置机任务配置列表-重启前置机",
+      "method": "post",
+      "url": "http://dev.m-glory.net/drs-server/qzjClient/receive"
+    },
+    "getdelqzjinfo": {
+      "code": "getdelqzjinfo",
+      "name": "前置机任务配置列表-删除前置机",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/delqzjinfo"
+    },
+    "getqzjinfo": {
+      "code": "getqzjinfo",
+      "name": "前置机任务配置列表-查看任务配置",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/getqzjinfo"
+    },
+    "getaddqzjinfo": {
+      "code": "getaddqzjinfo",
+      "name": "前置机任务配置列表-新增前置机",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/addqzjinfo"
+    },
+    "writeoffinitlist": {
+      "code": "writeoffinitlist",
+      "name": "订单核销初始化查询",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/management/initialization/list"
+    },
+    "addQZJXZ": {
+      "code": "addQZJXZ",
+      "name": "订单核销初始化增加全部订单下载标识",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/management/initialization/addQZJXZ"
+    },
+    "addByChannelSheetNos": {
+      "code": "addByChannelSheetNos",
+      "name": "订单核销初始化批量增加订单下载标识",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/management/initialization/addflag"
+    },
+    "delQZJXZ": {
+      "code": "delQZJXZ",
+      "name": "订单核销初始化删除全部订单下载标识",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/management/initialization/removeQZJXZ"
+    },
+    "removeByChannelSheetNos": {
+      "code": "removeByChannelSheetNos",
+      "name": "订单核销初始化批量删除订单下载标识",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/management/initialization/removeflag"
+    },
+    "getordertracks": {
+      "code": "getordertracks",
+      "name": "订单轨迹查询",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/management/orderRest/getorderprocedurelog"
+    },
+    "getmonthoperating": {
+      "code": "getmonthoperating",
+      "name": "月运营报表查询",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/operation/ordersummary/getsummaryordermonthreport"
+    },
+    "getEnts": {
+      "code": "getEnts",
+      "name": "所有企业查询",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/ent/listall"
+    },
+    "getEntsPro": {
+      "code": "getEntsPro",
+      "name": "所有企业正式环境查询",
+      "method": "post",
+      "url": "http://om.m-glory.net/qnh-operate-bsp/setting/ent/listall"
+    },
+    "getAuthinquiryList": {
+      "code": "getAuthinquiryList",
+      "name": "渠道授权列表查询",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/channel/tokens"
+    },
+    "getversionlog": {
+      "code": "getversionlog",
+      "name": "版本更新日志",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-stock-bsp/bsp/bspmddata/enterprise/getversionlog"
+    },
+    "addApplication": {
+      "code": "addApplication",
+      "name": "添加版本更新日志",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-stock-bsp/bsp/bspmddata/enterprise/addapplication"
+    },
+    "updateapplication": {
+      "code": "updateapplication",
+      "name": "修改版本更新日志",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-stock-bsp/bsp/bspmddata/enterprise/updateapplication"
+    },
+    "qzjmaxversion": {
+      "code": "qzjmaxversion",
+      "name": "获取最大版本号",
+      "method": "get",
+      "url": "http://dev.m-glory.net/bsp/pzgldown/qzjmaxversion"
+    },
+    "dbserach": {
+      "code": "dbserach",
+      "name": "获取订单推送设置",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/db/search"
+    },
+    "dbupdate": {
+      "code": "dbupdate",
+      "name": "修改订单推送设置",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/db/update"
+    },
+    "mescategory": {
+      "code": "mescategory",
+      "name": "获取常见问题分类",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/category/list"
+    },
+    "savecategory": {
+      "code": "savecategory",
+      "name": "常见问题分类保存",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/category/save"
+    },
+    "deletecategory": {
+      "code": "deletecategory",
+      "name": "常见问题分类删除",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/category/delete"
+    },
+    "articlelist": {
+      "code": "articlelist",
+      "name": "获取常见问题",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/article/list"
+    },
+    "articleDel": {
+      "code": "articleDel",
+      "name": "删除常见问题",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/article/delete"
+    },
+    "articleUpdate": {
+      "code": "articleDel",
+      "name": "修改常见问题",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/article/update"
+    },
+    "articleSave": {
+      "code": "articleDel",
+      "name": "保存常见问题",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/article/save"
+    },
+    "getallchannel": {
+      "code": "getallchannel",
+      "name": "企业渠道列表查询",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/channel/getallchannel"
+    },
+    "categoryadd": {
+      "code": "categoryadd",
+      "name": "添加单个分类",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/category/add"
+    },
+    "categoryedit": {
+      "code": "categoryedit",
+      "name": "更新单个分类",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/category/update"
+    },
+    "onegoodsadd": {
+      "code": "onegoodsedit",
+      "name": "添加单个商品：",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/bsp/bspmddata/one/onegoodsadd"
+    },
+    "onegoodsedit": {
+      "code": "onegoodsadd",
+      "name": "更新单个商品",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/bsp/bspmddata/one/onegoodsedit"
+    },
+    "onegoodsprice": {
+      "code": "onegoodsprice",
+      "name": "更新单个商品价格",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/bsp/bspmddata/one/onegoodsprice"
+    },
+    "onegoodsstock": {
+      "code": "onegoodsstock",
+      "name": "更新单个商品库存",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/bsp/bspmddata/one/onegoodsstock"
+    },
+    "onegoodsonoff": {
+      "code": "onegoodsonoff",
+      "name": "更新单个商品上下架状态",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/bsp/bspmddata/one/onegoodsonoff"
+    },
+    "getMenusData": {
+      "code": "getMenusData",
+      "name": "获取菜单全部信息",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/menu/menuList"
+    },
+    "getMenusDataPro": {
+      "code": "getMenusData",
+      "name": "获取菜单全部信息",
+      "method": "post",
+      "url": "http://www.m-glory.net/qnh-account-bsp/menu/menuList"
+    },
+    "addMenu": {
+      "code": "addMenu",
+      "name": "新增菜单",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/menu/addMenu"
+    },
+    "delMenu": {
+      "code": "delMenu",
+      "name": "删除菜单",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/menu/delMenu"
+    },
+    "updateMenu": {
+      "code": "updateMenu",
+      "name": "删除菜单",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-account-bsp/menu/updateMenu"
+    },
+    "getcommodityList": {
+      "code": "getcommodityList",
+      "name": "商品稽核差异表-企业",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-jh-boot/mddata/report/itemjh/summary"
+    },
+    "getStoreList": {
+      "code": "getStoreList",
+      "name": "商品稽核差异表-商品(门店)",
+      "method": "get",
+      "url": "http://dev.m-glory.net/qnh-jh-boot/omdmain/store/listAll"
+    },
+    "getentlist": {
+      "code": "getentlist",
+      "name": "企业信息列表",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/ent/list"
+    },
+    "getcxchannellist": {
+      "code": "getcxchannellist",
+      "name": "企业信息列表获取促销渠道",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/channel/channels"
+    },
+    "addent": {
+      "code": "addent",
+      "name": "新增企业保存",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/ent/save"
+    },
+    "getentbyid": {
+      "code": "getentbyid",
+      "name": "查询企业信息",
+      "method": "get",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/ent/getbyid"
+    },
+    "getitemjhinfos": {
+      "code": "getitemjhinfos",
+      "name": "商品稽核差异表-商品(商品)",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-jh-boot/mddata/item/getitemjhinfos"
+    },
+    "getstorejhinfos": {
+      "code": "getstorejhinfos",
+      "name": "商品信息完整稽核",
+      "method": "post",
+      "url": "http://dev.m-glory.net/jh/mddata/store/getstorejhinfos"
+    },
+    "getwebsocket": {
+      "code": "getwebsocket",
+      "name": "获取 websocket",
+      "method": "get",
+      "url": "http://dev.m-glory.net/drs-server/ws/client/listAll"
+    },
+    "getwriteoffrepList": {
+      "code": "getwriteoffrepList",
+      "name": "获取订单核销报表列表",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/operation/pos/entlist"
+    },
+    "saveposconfig": {
+      "code": "saveposconfig",
+      "name": "保存订单核销配置",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/operation/pos/save"
+    },
+    "sghxentlist": {
+      "code": "sghxentlist",
+      "name": "超卖查询",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/operation/sghx/entlist"
+    },
+    "getwritebacklistsList": {
+      "code": "getwritebacklistsList",
+      "name": "订单核销查询",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/operation/pos/faillist"
+    },
+    "writeback": {
+      "code": "writeback",
+      "name": "回写保存",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/operation/pos/writeback"
+    },
+    "getpriceconfiglists": {
+      "code": "getpriceconfiglists",
+      "name": "中间库稽核信息",
+      "method": "post",
+      "url": "http://dev.m-glory.net/drs-server/queryconfig/find"
+    },
+    "editgoodsname": {
+      "code": "editgoodsname",
+      "name": "修改商品名称回显名称",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/operation/pos/getitem"
+    },
+    "editgoodsnamesave": {
+      "code": "editgoodsnamesave",
+      "name": "修改商品名称保存",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/operation/pos/update"
+    },
+    "getpriceconfig": {
+      "code": "getpriceconfig",
+      "name": "获取中间库查询配置列表",
+      "method": "post",
+      "url": "http://dev.m-glory.net/drs-server/queryconfig/find"
+    },
+    "getorderauditlists": {
+      "code": "getorderauditlists",
+      "name": "实时订单稽核差异表-门店",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-jh-boot/orderjh/getOrderJhReports"
+    },
+    "getsingleorderlist": {
+      "code": "getsingleorderlist",
+      "name": "实时订单稽核差异表-订单",
+      "method": "post",
+      "url": "http://dev.m-glory.net/jh/orderjh/getOrderJhInfos"
+    },
+    "getstoreaudit": {
+      "code": "getstoreaudit",
+      "name": "商品稽核差异表-门店",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-jh-boot/mddata/report/itemjh/list"
+    },
+    "addconfig": {
+      "code": "getstoreaudit",
+      "name": "中间库查询配置-添加配置",
+      "method": "post",
+      "url": "http://dev.m-glory.net/drs-server/queryconfig/add"
+    },
+    "saveconfig": {
+      "code": "saveconfig",
+      "name": "中间库查询配置-查看详情保存",
+      "method": "post",
+      "url": "http://dev.m-glory.net/drs-server/queryconfig/updateQueryConfig"
+    },
+    "configimport": {
+      "code": "configimport",
+      "name": "中间库查询配置-导入",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-import-bsp/dbqueryconfig/import"
+    },
+    "delconfig": {
+      "code": "delconfig",
+      "name": "中间库查询配置-删除",
+      "method": "get",
+      "url": "http://dev.m-glory.net/drs-server/queryconfig/del"
+    },
+    "audit": {
+      "code": "audit",
+      "name": "实时订单稽核",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/clientmsg/delBatchEntMsg"
+    },
+    "getstorechecklist": {
+      "code": "getstorechecklist ",
+      "name": "获取门店查询",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/store/check/list"
+    },
+    "getstorecheckdetails": {
+      "code": "getstorecheckdetails ",
+      "name": "门店稽核查看详情",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/store/check/details"
+    },
+    "itemregionjh": {
+      "code": "itemregionjh ",
+      "name": "手动稽核",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-jh-boot/itemRegion/jh"
+    },
+    "getEntMsg": {
+      "code": "getEntMsg",
+      "name": "查询企业推送配置",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/clientmsg/getEntMsg"
+    },
+    "delEntMsg": {
+      "code": "delEntMsg",
+      "name": "删除企业推送配置",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/clientmsg/delEntMsg"
+    },
+    "delBatchEntMsg": {
+      "code": "delBatchEntMsg",
+      "name": "批量删除企业推送配置",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/clientmsg/delBatchEntMsg"
+    },
+    "addEntMsg": {
+      "code": "addEntMsg",
+      "name": "添加企业推送配置",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/clientmsg/addEntMsg"
+    },
+    "editEntMsg": {
+      "code": "editEntMsg",
+      "name": "修改企业推送配置",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/clientmsg/editEntMsg"
+    },
+    "addImage": {
+      "code": "addImage",
+      "name": "企业信息配置--新增图片",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-stock-bsp/bsp/bspmddata/enterprise/addImage"
+    },
+    "getordercheckdetail": {
+      "code": "getordercheckdetail",
+      "name": "订单超卖列表",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/operation/sghx/entlist"
+    },
+    "getlistCmOrderItems": {
+      "code": "getlistCmOrderItems",
+      "name": "查询超卖商品",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/operation/sghx/listCmOrderItems"
+    },
+    "getupdateCmOrder": {
+      "code": "getupdateCmOrder",
+      "name": "修改超卖商品",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/operation/sghx/updateCmOrder"
+    },
+    "getErplist": {
+      "code": "getErplist",
+      "name": "查看erp数据",
+      "method": "get",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/geterps"
+    },
+    "deltaskinfo": {
+      "code": "deltaskinfo",
+      "name": "删除前置机任务",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/deltaskinfo"
+    },
+    "copytaskinfo": {
+      "code": "copytaskinfo",
+      "name": "复制前置机任务",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/copytask"
+    },
+    "receivetaskinfo": {
+      "code": "receivetaskinfo",
+      "name": "清除前置机任务文件",
+      "method": "post",
+      "url": "http://dev.m-glory.net/drs-server/qzjClient/receive"
+    },
+    "taskExport": {
+      "code": "taskExport",
+      "name": "前置机任务导出",
+      "method": "get",
+      "url": "http://dev.m-glory.net/qnh-frontserver/imports/exportExcel"
+    },
+    "getSourceTypeKeyword": {
+      "code": "getSourceTypeKeyword",
+      "name": "前置机获取关键码",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/bsp/pzgl/getSourceTypeKeyword"
+    },
+    "qzjtaskinput": {
+      "code": "qzjtaskinput",
+      "name": "前置机导入任务配置",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-frontserver/imports/qzjtaskinput"
+    },
+    "getnotovermachinedetail": {
+      "code": "getnotovermachinedetail",
+      "name": "正退单未过机详情",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/operation/pos/unbalancelist"
+    },
+    "categorydel": {
+      "code": "categorydel",
+      "name": "正退单未过机详情",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/category/delete"
+    },
+    "editconfig": {
+      "code": "editconfig",
+      "name": "订单核销报表-修改配置",
+      "method": "get",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/operation/pos/get"
+    },
+    "delconfigjh": {
+      "code": "delconfigjh",
+      "name": "中间库查询配置-删除",
+      "method": "post",
+      "url": "http://dev.m-glory.net/drs-server/queryconfig/del"
+    },
+    "getmiddlelibrary": {
+      "code": "getmiddlelibrary",
+      "name": "订单核销报表-查看核销配置",
+      "method": "post",
+      "url": "http://dev.m-glory.net/drs-server/query/client"
+    },
+    "updatechannel": {
+      "code": "updatechannel",
+      "name": "企业渠道修改",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/channel/updatechannel"
+    },
+    "addchannel": {
+      "code": "addchannel",
+      "name": "企业渠道修改",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/setting/channel/addchannel"
+    },
+    "getPicker": {
+      "code": "getPicker",
+      "name": "查询拣货助手参数配置",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-client-console/operate/client/getclientparameterlist"
+    },
+    "addPickerParam": {
+      "code": "addPickerParam",
+      "name": "新增拣货助手参数配置",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-client-console/operate/client/addclientparameter"
+    },
+    "updatePickerParam": {
+      "code": "updatePickerParam",
+      "name": "新增拣货助手参数配置",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-client-console/operate/client/updateclientparameter"
+    },
+    "getPickerLogs": {
+      "code": "getPickerLogs",
+      "name": "查看拣货助手的日志",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-client-console/operate/client/getParameterLogs"
+    },
+    "initstoreparam": {
+      "code": "initstoreparam",
+      "name": "初始化拣货助手",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-client-console/operate/client/initstoreparam"
+    },
+    "getAllclientParameter": {
+      "code": "getAllclientParameter",
+      "name": "获取全量拣货参数",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-client-console/operate/client/getallclientparameter"
+    },
+    "getCancelSyncList": {
+      "code": "getCancelSyncList",
+      "name": "断开同步关系列表",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/itemStockSync/selectItemList"
+    },
+    "operateSyncStatus": {
+      "code": "operateSyncStatus",
+      "name": "移除停止同步库存商品",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/itemStockSync/operateSyncStatus"
+    },
+    "stopSyncItemStockImport": {
+      "code": "stopSyncItemStockImport",
+      "name": "导入停止同步库存商品",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-import-bsp/bsp/import/stopSyncItemStockImport"
+    },
+    "getArmsList": {
+      "code": "getArmsList",
+      "name": "获取arms数据",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-client-console/arms/querymetric"
+    },
+    "queryenterprisebymenu": {
+      "code": "queryenterprisebymenu",
+      "name": "获取arms数据",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-client-console/arms/queryenterprisebymenu"
+    },
+    "getpromotionchecklist": {
+      "code": "getpromotionchecklist",
+      "name": "促销稽核页面查询接口",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/promotion/check/list"
+    },
+    "getpromotioncheckdetail": {
+      "code": "getpromotioncheckdetail",
+      "name": "促销稽核页面查询接口",
+      "method": "post",
+      "url": "http://dev-om.m-glory.net/qnh-operate-bsp/promotion/check/detail"
+    },
+    "promotionJh": {
+      "code": "promotionJh ",
+      "name": "促销手动稽核",
+      "method": "post",
+      "url": "http://dev.m-glory.net/qnh-jh-boot/promotion/promotionJh"
     }
   }
 }

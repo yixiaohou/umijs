@@ -1,10 +1,18 @@
 import { extend } from 'umi-request';
 import API from './api.model';
+import { LocalStorageService } from './localStorage';
 
 export default class httpService {
   constructor() {
     this.getApi();
   }
+  private storage = new LocalStorageService();
+
+  getToken = data => {
+    return this.request
+      .post('http://dev.m-glory.net/third/login', { data: data })
+      .then(res => res);
+  };
   getUser: API | undefined;
 
   request = extend({
@@ -13,6 +21,9 @@ export default class httpService {
     headers: {
       'Content-Type': 'application/json',
     },
+    // params: {
+    //   token: localStorage.getItem('token')
+    // },
     errorHandler: function(error) {
       /* 异常处理 */
     },
@@ -20,7 +31,7 @@ export default class httpService {
 
   // 初始化接口
   getApi = () => {
-    this.request.get('http://127.0.1:9123/apis.json').then(res => {
+    this.request.get('http://127.0.1:9124/apis.json').then(res => {
       this.initAPIS(res.apis);
     });
   };

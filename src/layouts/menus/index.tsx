@@ -1,9 +1,12 @@
-
 import styles from './index.less';
 import { Menu } from 'antd';
 import { connect } from 'dva';
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
-import React, { Component, PureComponent } from 'react'
+import {
+  UserOutlined,
+  LaptopOutlined,
+  NotificationOutlined,
+} from '@ant-design/icons';
+import React, { Component, PureComponent } from 'react';
 import { Link } from 'umi';
 
 const { SubMenu } = Menu;
@@ -13,15 +16,12 @@ const mapStateToProps = (menu: any) => {
 };
 
 class index extends React.PureComponent {
-
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch({
-      type: 'menu/getMenuData'
-    })
-
+      type: 'menu/getMenuData',
+    });
   }
-
 
   render() {
     const { menu } = this.props;
@@ -35,32 +35,33 @@ class index extends React.PureComponent {
         defaultOpenKeys={['sub1']}
         style={{ height: '100%', borderRight: 0 }}
       >
-        {
-          menusData.map((item, index) => {
-            return (
-
-              <SubMenu
-                key={index}
-                title={<span><UserOutlined />{item.name}</span>}
-              >
-                {
-                  item.children && item.children.map((children) => {
-                    return (
-
-                      <Menu.Item key={children.url} >
-                        <Link to={children.url} key={children.id}>{children.name}</Link>
-                      </Menu.Item>
-
-                    )
-                  })
-                }
-              </SubMenu>)
-          })
-        }
+        {menusData.map((item, index) => {
+          return (
+            <SubMenu
+              key={index}
+              title={
+                <span>
+                  <UserOutlined />
+                  {item.menuname}
+                </span>
+              }
+            >
+              {item.children &&
+                item.children.map(children => {
+                  return (
+                    <Menu.Item key={children.menuurl}>
+                      <Link to={children.menuurl} key={children.id}>
+                        {children.menuname}
+                      </Link>
+                    </Menu.Item>
+                  );
+                })}
+            </SubMenu>
+          );
+        })}
       </Menu>
-
-    )
+    );
   }
 }
 
-export default connect((menu) => (menu))(index)
+export default connect(menu => menu)(index);

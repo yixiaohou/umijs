@@ -25,7 +25,7 @@ export default function index(props) {
       remember: true,
       system: 'bsp2-ng',
     };
-    http.getUser?.requset(opt)?.then(res => {
+    http.getToken(opt)?.then(res => {
       if (res.code === 1) {
         localStorage.setToken(res.data.token);
         history.push('/');

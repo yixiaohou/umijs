@@ -1,64 +1,85 @@
 {
   "data": [
     {
-      "id": 1,
-      "name": "概览111111",
-      "enName": "Dashboard",
-      "icon": "dashboard",
-      "url": "/dashboard"
+      "menuname": "首页",
+      "menuurl": "/dashboard/qnhadmin",
+      "icon": "appstore"
     },
     {
-      "id": 2,
-      "name": "大表格渲染",
-      "enName": "Table",
-      "icon": "table",
-      "url": "/table",
+      "menuname": "权限管理",
+      "icon": "appstore",
       "children": [
         {
-          "id": 21,
-          "name": "基础列表",
-          "enName": "Basic Table",
-          "url": "/table"
+          "menuname": "用户管理",
+          "menuurl": "/compete/user"
         },
         {
-          "id": 22,
-          "name": "基础列表2",
-          "enName": "Basic Table",
-          "url": "/table/basic/basic2"
+          "menuname": "角色管理",
+          "menuurl": "/compete/role"
         },
         {
-          "id": 23,
-          "name": "大列表",
-          "enName": "Big Table",
-          "url": "/table/big"
+          "menuname": "菜单管理",
+          "menuurl": "/compete/menu"
+        },
+        {
+          "menuname": "权限模板",
+          "menuurl": "/compete/powermodal"
         }
       ]
     },
     {
-      "id": 3,
-      "name": "图表",
-      "enName": "chart",
-      "icon": "bar-chart",
-      "url": "/chart"
-    },
-    {
-      "id": 4,
-      "name": "用户中心",
-      "enName": "System",
-      "icon": "setting",
-      "url": "/user",
+      "menuname": "拣货管理",
+      "icon": "reconciliation",
       "children": [
         {
-          "id": 41,
-          "name": "用户中心1",
-          "enName": "User",
-          "url": "/user/center1"
+          "menuname": "挂起原因",
+          "menuurl": "/picking/hangup"
+        }
+      ]
+    },
+    {
+      "menuname": "常见问题",
+      "icon": "reconciliation",
+      "children": [
+        {
+          "menuname": "问题类型",
+          "menuurl": "/commonprob/quescategory"
         },
         {
-          "id": 42,
-          "name": "用户中心2",
-          "enName": "Message",
-          "url": "/user/center2"
+          "menuname": "常见问题",
+          "menuurl": "/commonprob/newcommonprob"
+        }
+      ]
+    },
+    {
+      "menuname": "分析系统",
+      "icon": "appstore",
+      "children": [
+        {
+          "menuname": "系统分析报表",
+          "menuurl": "/point/systemorder"
+        },
+        {
+          "menuname": "页面分析报表",
+          "menuurl": "/point/menusorder"
+        },
+        {
+          "menuname": "功能分析报表",
+          "menuurl": "/point/functionpoint"
+        },
+        {
+          "menuname": "菜单使用统计",
+          "menuurl": "/point/globalpoint"
+        }
+      ]
+    },
+    {
+      "menuname": "消息与公告",
+      "icon": "appstore",
+      "children": [
+        {
+          "menuname": "消息推送配置",
+          "menuurl": "/account/messagecenter"
         }
       ]
     }

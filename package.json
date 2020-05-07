@@ -7,7 +7,7 @@
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
-    "mockapi": "http-server mock --cors -c -1  -s -p 9123"
+    "mockapi": "http-server mock --cors -c -1  -s -p 9124"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
