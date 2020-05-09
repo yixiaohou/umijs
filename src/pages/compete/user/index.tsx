@@ -1,14 +1,14 @@
-import styles from './index.css';
 import React, { Component, Fragment } from 'react';
 import { message, Button, notification } from 'antd';
 // import Searchbar from 'components/searchbar/Searchbar';
 import Searchbar from '@/components/Searchbar';
-import httpService from '@/utils/httpService';
+import { HttpService } from '@/utils/httpService';
 import Table from '@/components/Table';
 import Pagination from '@/components/Pagination';
 
-export default class index extends Component {
-  private http = new httpService();
+export default class index extends React.Component<any, any> {
+  componentDidMount() {}
+
   state = {
     data: [],
     page_no: 1,
@@ -29,18 +29,19 @@ export default class index extends Component {
     console.log(ref);
     this.getUserInfo();
   };
-  paginChange = (page, pageSize) => {
-    console.log(page, pageSize);
+
+  paginChange = (page: number, pageSize: number) => {
     this.parmes.page_no = page;
+    this.parmes.page_size = pageSize;
     this.getUserInfo();
   };
 
   getUserInfo() {
-    this.http.getUser?.requset(this.parmes)?.then(res => {
-      console.log(res);
+    HttpService.getUser?.requset(this.parmes)?.then(res => {
       this.setState({
         data: res.rows,
         count: res.count,
+        pageSize: this.parmes.page_size,
       });
     });
   }
@@ -51,11 +52,7 @@ export default class index extends Component {
       <Fragment>
         <Searchbar parent={this.search}></Searchbar>
         <Table data={data}></Table>
-        <Pagination
-          parent={this.search}
-          count={count}
-          child={this.paginChange}
-        ></Pagination>
+        <Pagination count={count} child={this.paginChange}></Pagination>
       </Fragment>
     );
   }

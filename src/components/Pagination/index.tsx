@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { Pagination } from 'antd';
 
-export default class index extends Component {
-  constructor(props) {
-    super(props);
-  }
-  changeNum = (page, pageSize) => {
+interface Props {
+  count: number;
+  child: any;
+}
+export default class index extends Component<Props> {
+  changeNum = (page: number, pageSize: number | undefined) => {
     // console.log(res);
     console.log(page, pageSize);
     this.props.child(page, pageSize);
   };
-  changeSize = (current, size) => {
-    console.log(current, size);
+  changeSize = (current: number, size: number) => {
+    this.props.child(current, size);
   };
   render() {
     const { count } = this.props;
@@ -19,6 +20,7 @@ export default class index extends Component {
       <Pagination
         total={count}
         defaultPageSize={20}
+        defaultCurrent={1}
         showSizeChanger
         showQuickJumper
         onChange={(page, pageSize) => this.changeNum(page, pageSize)}

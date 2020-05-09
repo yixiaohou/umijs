@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
-import { Table, Tag } from 'antd';
+import { Table } from 'antd';
+const { Column } = Table;
 
-const { Column, ColumnGroup } = Table;
-export default class index extends Component {
+interface Props {
+  data: Array<any>;
+}
+export default class index extends Component<Props> {
   render() {
-    console.log(this.props);
     const { data } = this.props;
 
     return (
-      <Table
-        dataSource={data}
-        pagination={false}
-        onChange={e => {
-          console.log(e);
-          // this.setState({ bottom: e.target.value });
-        }}
-      >
+      <Table dataSource={data} pagination={false}>
         <Column title="用户名" dataIndex="code" key="code" />
         <Column title="姓名" dataIndex="name" key="name" />
         <Column title="状态" dataIndex="status" key="status" />

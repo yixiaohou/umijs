@@ -37,9 +37,9 @@ export class SearchItemWithDatasource {
   selectedvalue?: any; // 门店稽核专用
 }
 
-export default class index extends Component {
-  constructor(props) {
-    super(props);
+export default class index extends Component<any> {
+  componentDidMount() {
+    this.query();
   }
   private usertype = [
     { name: '牵牛花运营', code: '1' },
@@ -73,7 +73,11 @@ export default class index extends Component {
   query() {
     console.log(this.option);
     console.log(this.props);
-    this.props.parent(this.option[0].valueKey.state.value);
+    if (this.option[0].valueKey !== '') {
+      this.props.parent(this.option[0].valueKey?.state.value);
+    } else {
+      this.props.parent('');
+    }
   }
 
   render() {

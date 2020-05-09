@@ -14,7 +14,6 @@ const userInfo = 'userInfo';
 const apiGroup = 'apiGroup';
 const timeoutKey = 'timeout';
 const token = 'token';
-
 export function setToken(data: string) {
   localStorage.setItem(token, data);
 }
@@ -26,8 +25,10 @@ export function getToken() {
 export class LocalStorageService {
   // 设置用户信息
   public setUserInfo(info: Userinfo) {
-    localStorage.setItem(timeoutKey, info.exp.toString());
-    localStorage.setItem(userInfo, JSON.stringify(info));
+    if (info && info.exp) {
+      localStorage.setItem(timeoutKey, info.exp.toString());
+      localStorage.setItem(userInfo, JSON.stringify(info));
+    }
   }
   // 获取用户信息
   public getUserInfo() {

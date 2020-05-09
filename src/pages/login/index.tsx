@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Input, Button, Checkbox } from 'antd';
-import { getUser } from '@/service/getUser';
-import httpService from '@/utils/httpService';
+import { HttpService } from '@/utils/httpService';
 import { history } from 'umi';
-import { LocalStorageService } from '@/utils/localStorage';
+import { setToken } from '@/utils/localStorage';
 const layout = {
   labelCol: { span: 8 },
   wrapperCol: { span: 16 },
@@ -12,11 +11,9 @@ const tailLayout = {
   wrapperCol: { offset: 8, span: 16 },
 };
 
-export default function index(props) {
-  const http = new httpService();
-  const localStorage = new LocalStorageService();
-  const { children } = props;
-  const onFinish = values => {
+export default function index(props: { children: any }) {
+  const onFinish: any = (values: { username: any; password: any }) => {
+    console.log(HttpService);
     console.log('Success:', values);
 
     let opt = {
@@ -25,14 +22,14 @@ export default function index(props) {
       remember: true,
       system: 'bsp2-ng',
     };
-    http.getToken(opt)?.then(res => {
+    HttpService.getToken(opt)?.then(res => {
       if (res.code === 1) {
-        localStorage.setToken(res.data.token);
+        setToken(res.data.token);
         history.push('/');
       }
     });
   };
-  const onFinishFailed = errorInfo => {
+  const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo);
   };
   return (

@@ -29,6 +29,7 @@ class UserInfoAll {
   rolecode!: string[];
   ent_id!: string;
   mobileNo!: string;
+  exp: string | undefined;
 }
 
 export type Userinfo = Partial<UserInfoAll>;

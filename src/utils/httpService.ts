@@ -2,77 +2,45 @@ import { extend } from 'umi-request';
 import API from './api.model';
 import { LocalStorageService } from './localStorage';
 
-export default class httpService {
-  constructor() {
-    this.getApi();
-  }
-  private storage = new LocalStorageService();
+export class HttpService {
+  static getUser: API | undefined;
+  static isinited = true;
+  constructor() {}
 
-  getToken = data => {
-    return this.request
-      .post('http://dev.m-glory.net/third/login', { data: data })
-      .then(res => res);
-  };
-  getUser: API | undefined;
-
-  request = extend({
-    // prefix: "http://test.m-glory.net",
+  static request = extend({
     timeout: 1000,
     headers: {
       'Content-Type': 'application/json',
     },
-    // params: {
-    //   token: localStorage.getItem('token')
-    // },
-    errorHandler: function(error) {
-      /* 异常处理 */
-    },
   });
 
-  // 初始化接口
-  getApi = () => {
-    this.request.get('http://127.0.1:9124/apis.json').then(res => {
-      this.initAPIS(res.apis);
-    });
-  };
+  //
+  static getToken(data: Object) {
+    return this.request
+      .post('http://dev.m-glory.net/third/login', { data: data })
+      .then(res => res);
+  }
 
-  initAPIS(apis: Array<any>) {
-    for (const key in apis) {
-      if (apis.hasOwnProperty(key)) {
-        if (apis[key].method === 'post') {
-          this[key] = new API(apis[key]);
-        }
-        if (apis[key].method === 'get') {
-          this[key] = new API(apis[key]);
-          // this[key] = () => {
-          //     return this.request.get(apis[key]['url'])
-          //         .then((res) => (res))
-          // }
-        }
-      }
+  // 初始化接口
+  static getApi() {
+    if (this.isinited) {
+      this.isinited = false;
+      this.request.get('http://127.0.1:9124/apis.json').then(res => {
+        this.initAPIS(res.apis);
+      });
     }
   }
 
-  codeMessage = {
-    200: '服务器成功返回请求的数据。',
-    201: '新建或修改数据成功。',
-    202: '一个请求已经进入后台排队（异步任务）。',
-    204: '删除数据成功。',
-    400: '发出的请求有错误，服务器没有进行新建或修改数据的操作。',
-    401: '用户没有权限（令牌、用户名、密码错误）。',
-    403: '用户得到授权，但是访问是被禁止的。',
-    404: '发出的请求针对的是不存在的记录，服务器没有进行操作。',
-    406: '请求的格式不可得。',
-    410: '请求的资源被永久删除，且不会再得到的。',
-    422: '当创建一个对象时，发生一个验证错误。',
-    500: '服务器发生错误，请检查服务器。',
-    502: '网关错误。',
-    503: '服务不可用，服务器暂时过载或维护。',
-    504: '网关超时。',
+  static initAPIS = (apis: Array<any>) => {
+    for (const key in apis) {
+      if (apis.hasOwnProperty(key)) {
+        if (apis[key].method === 'post') {
+          HttpService[key] = new API(apis[key]);
+        }
+        if (apis[key].method === 'get') {
+          HttpService[key] = new API(apis[key]);
+        }
+      }
+    }
   };
-
-  // const httpService = (url, params) => {
-  //     return request.post(url, { data: params })
-  //         .then((res) => (res))
-  // }
 }
