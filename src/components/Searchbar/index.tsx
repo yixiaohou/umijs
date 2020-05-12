@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { message, Button, Input, Row, Col } from 'antd';
+import { message, Button, Input, Row, Col, Select } from 'antd';
 
 export enum SearchType {
   input = 0,
@@ -34,6 +34,7 @@ export class SearchItemWithDatasource {
   date?: any; // 时间选择器显示
   emitFun?: any;
   importent?: boolean;
+  placeholder?: string;
   selectedvalue?: any; // 门店稽核专用
 }
 
@@ -41,6 +42,7 @@ export default class index extends Component<any> {
   componentDidMount() {
     this.query();
   }
+
   private usertype = [
     { name: '牵牛花运营', code: '1' },
     { name: '总部用户', code: '2' },
@@ -53,54 +55,123 @@ export default class index extends Component<any> {
     { name: '启用', code: '1' },
     { name: '停用', code: '-1' },
   ];
-  private option: SearchItemWithDatasource[] = [
-    { label: '用户名', type: SearchType.input, nameKey: 'code', valueKey: '' },
-    { label: '姓名', type: SearchType.input, nameKey: 'name', valueKey: '' },
-    {
-      label: '用户类型',
-      type: SearchType.select,
-      nameKey: 'usertype',
-      initList: JSON.parse(JSON.stringify(this.usertype)),
-    },
-    {
-      label: '状态',
-      type: SearchType.select,
-      nameKey: 'status',
-      initList: JSON.parse(JSON.stringify(this.status)),
-    },
-  ];
 
-  query() {
-    console.log(this.option);
-    console.log(this.props);
-    if (this.option[0].valueKey !== '') {
-      this.props.parent(this.option[0].valueKey?.state.value);
-    } else {
-      this.props.parent('');
+  query(option: Array<any> = []) {
+    if (option.length === 0) {
+      this.props.parent();
+      return;
     }
+
+    let emitObj: any = {};
+    console.log(option[0].valueKey.state.value);
+    option.forEach(item => {
+      switch (item.type) {
+        case SearchType.input:
+          console.log(item);
+          emitObj[item.nameKey] = item.valueKey.state.value;
+          break;
+        case SearchType.select:
+          emitObj[item.nameKey] = item;
+          break;
+        case SearchType.doubleSelect:
+          emitObj[item.doubleSelectList[0].name] =
+            item.doubleSelectList[0].valueKey;
+          emitObj[item.doubleSelectList[1].name] =
+            item.doubleSelectList[1].valueKey;
+          break;
+        case SearchType.selectCheck:
+          emitObj[item.selectCheckList[0].name] =
+            item.selectCheckList[0].valueKey;
+          emitObj[item.selectCheckList[1].name] =
+            item.selectCheckList[1].valueKey;
+          break;
+        case SearchType.doubleInput:
+          emitObj[item.doubleInput[0].name] = item.doubleInput[0].valueKey;
+          emitObj[item.doubleInput[1].name] = item.doubleInput[1].valueKey;
+          break;
+        case SearchType.singleDate:
+          let time = new Date(item.valueKey);
+          let month = `${time.getMonth() + 1}`.padStart(2, '0');
+          let date = `${time.getDate()}`.padStart(2, '0');
+          emitObj[item.nameKey] = `${time.getFullYear()}-${month}-${date}`;
+          break;
+        case SearchType.monthPicker:
+          if (item.valueKey) {
+            let monthPicker =
+              item.valueKey.getMonth() + 1 < 10
+                ? '0' + (item.valueKey.getMonth() + 1)
+                : item.valueKey.getMonth() + 1;
+            emitObj[
+              item.nameKey
+            ] = `${item.valueKey.getFullYear()}-${monthPicker}`;
+          }
+          break;
+        case SearchType.datePicker:
+          if (item['date'] && item['date'].length !== 0) {
+            let starTime = new Date(item['date'][0]);
+            let endTime = new Date(item['date'][1]);
+            let startMonth = `${starTime.getMonth() + 1}`.padStart(2, '0');
+            let endMonth = `${endTime.getMonth() + 1}`.padStart(2, '0');
+            let startDate = `${starTime.getDate()}`.padStart(2, '0');
+            let endDate = `${endTime.getDate()}`.padStart(2, '0');
+            emitObj[
+              item.datePicker[0].name
+            ] = `${starTime.getFullYear()}-${startMonth}-${startDate} 00:00:00`;
+            emitObj[
+              item.datePicker[1].name
+            ] = `${endTime.getFullYear()}-${endMonth}-${endDate} 23:59:59`;
+          }
+          break;
+        case SearchType.radio:
+          emitObj[item.nameKey] = item.valueKey;
+          break;
+        case SearchType.checkbox:
+          emitObj[item.nameKey] = item.valueKey;
+          break;
+      }
+    });
+    console.log(emitObj);
+    this.props.parent(emitObj);
   }
 
   render() {
+    let { option } = this.props;
+
     return (
       <Fragment>
         {
           <Row>
-            {this.option.map((item, index) => {
+            {option.map((item, index) => {
               if (item.type === 0) {
                 return (
                   <Col span="8" key={index}>
                     <label>{item.label}</label>
                     <Input
+                      // ref={input => {
+                      //   if (input && input.state && input.state.value) {
+                      //     item.valueKey = input.state.value
+                      //   }
+                      // }}
                       ref={input => (item.valueKey = input)}
-                      placeholder="Basic usage"
+                      placeholder={
+                        item.placeholder
+                          ? item.placeholder
+                          : `请输入${item.label}`
+                      }
                     />
                   </Col>
                 );
               }
+              // if (item.type === 0) {
+              //   return (
+
+              //   )
+
+              // }
             })}
           </Row>
         }
-        <Button onClick={() => this.query()}>查询</Button>
+        <Button onClick={() => this.query(option)}>查询</Button>
       </Fragment>
     );
   }

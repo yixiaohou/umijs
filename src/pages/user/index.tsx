@@ -4,8 +4,7 @@ import { Button } from 'antd';
 import { Link } from 'umi';
 import User from './user';
 
-export default function index(props) {
+export default function index(props: { children: any }) {
   const { children } = props;
-
   return { children };
 }

@@ -18,15 +18,6 @@ export default class index extends Component<Props> {
         <Column title="用户类型" dataIndex="usertype" key="usertype" />
         <Column title="管理门店" dataIndex="userstores" key="userstores" />
         <Column title="用户角色" dataIndex="rolename" key="rolename" />
-        {/* <Column
-                    title="Action"
-                    render={(text, record) => (
-                        <span>
-                            <a style={{ marginRight: 16 }}>Invite {record.lastName}</a>
-                            <a>Delete</a>
-                        </span>
-                    )}
-                /> */}
       </Table>
     );
   }

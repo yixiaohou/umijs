@@ -25,8 +25,11 @@ export class HttpService {
   static getApi() {
     if (this.isinited) {
       this.isinited = false;
-      this.request.get('http://127.0.1:9124/apis.json').then(res => {
-        this.initAPIS(res.apis);
+      return this.request.get('http://127.0.1:9124/apis.json').then(res => {
+        if (res.code === '0') {
+          this.initAPIS(res.apis);
+        }
+        return true;
       });
     }
   }
@@ -34,12 +37,7 @@ export class HttpService {
   static initAPIS = (apis: Array<any>) => {
     for (const key in apis) {
       if (apis.hasOwnProperty(key)) {
-        if (apis[key].method === 'post') {
-          HttpService[key] = new API(apis[key]);
-        }
-        if (apis[key].method === 'get') {
-          HttpService[key] = new API(apis[key]);
-        }
+        HttpService[key] = new API(apis[key]);
       }
     }
   };

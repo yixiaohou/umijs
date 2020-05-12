@@ -41,6 +41,18 @@ export default [
           // },
         ],
       },
+      {
+        path: '/reactDemo',
+        title: 'REACTDEMO',
+        component: '@/pages/reactDemo/index',
+        routes: [
+          {
+            path: './hooks',
+            component: '@/pages/reactDemo/hooks/index',
+            title: 'Hooks例子',
+          },
+        ],
+      },
     ],
   },
 ];

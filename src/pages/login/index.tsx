@@ -30,7 +30,7 @@ export default function index(props: { children: any }) {
     });
   };
   const onFinishFailed = (errorInfo: any) => {
-    console.log('Failed:', errorInfo);
+    console.log('Faile2222d:', errorInfo);
   };
   return (
     <Form
@@ -41,9 +41,11 @@ export default function index(props: { children: any }) {
       onFinishFailed={onFinishFailed}
     >
       <Form.Item
-        label="Username"
+        label="用户名"
         name="username"
-        rules={[{ required: true, message: 'Please input your username!' }]}
+        rules={[
+          { required: true, message: 'Please1111 input your usern22222ame!' },
+        ]}
       >
         <Input />
       </Form.Item>

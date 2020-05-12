@@ -74,12 +74,12 @@
       ]
     },
     {
-      "menuname": "消息与公告",
+      "menuname": "reactDemo",
       "icon": "appstore",
       "children": [
         {
-          "menuname": "消息推送配置",
-          "menuurl": "/account/messagecenter"
+          "menuname": "hooks例子",
+          "menuurl": "/reactDemo/hooks"
         }
       ]
     }
