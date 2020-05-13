@@ -1,9 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import { message, Button, notification } from 'antd';
+import { message, Button, notification, Space, Table } from 'antd';
 // import Searchbar from 'components/searchbar/Searchbar';
 import Searchbar from '@/components/Searchbar/index';
 import { HttpService } from '@/utils/httpService';
-import Table from '@/components/Table';
 import Pagination from '@/components/Pagination';
 import { SearchType, SearchItemWithDatasource } from '@/components/Searchbar';
 export default class index extends React.Component {
@@ -13,6 +12,7 @@ export default class index extends React.Component {
     page_no: 1,
     page_size: 20,
     count: 0,
+    selectedRowKeys: [],
   };
   private usertype = [
     { name: '牵牛花运营', code: '1' },
@@ -57,6 +57,46 @@ export default class index extends React.Component {
     sort: 'code',
     search: { code: '', name: '', usertype: '', status: '', rolecode: '' },
   };
+  private collumns = [
+    { key: 'code', title: '用户名', dataIndex: 'code' },
+    { key: 'name', title: '姓名', dataIndex: 'name' },
+    {
+      key: 'status',
+      title: '状态',
+      dataIndex: 'status',
+      render: r => (r === '1' ? '启用' : '禁用'),
+    },
+    { key: 'mobileNo', dataIndex: 'mobileNo', title: '手机号' },
+    {
+      key: 'usertype',
+      dataIndex: 'usertype',
+      title: '用户类型',
+      render: r => this.usertype.filter(item => item.code === r)[0].name,
+    },
+    {
+      key: 'userstores',
+      dataIndex: 'userstores',
+      title: '管理门店',
+      width: 100,
+      ellipsis: true,
+    },
+    { key: 'rolename', dataIndex: 'rolename', title: '用户角色' },
+    {
+      key: 'action',
+      dataIndex: 'action',
+      title: '操作',
+      render: (text, record) => (
+        <Space size="middle">
+          <a onClick={() => this.delUser(text, record)}>删除</a>
+        </Space>
+      ),
+    },
+  ];
+
+  delUser(text, record) {
+    console.log(text);
+    console.log(record);
+  }
 
   search = (ref: any) => {
     console.log(ref);
@@ -80,12 +120,27 @@ export default class index extends React.Component {
     });
   }
 
+  onSelectChange = (selectedRowKeys, selectRows) => {
+    console.log('selectedRowKeys changed: ', selectedRowKeys);
+    this.setState({ selectedRowKeys });
+  };
+
   render() {
-    const { data, count } = this.state;
+    const { data, count, selectedRowKeys } = this.state;
+    const rowSelection = {
+      selectedRowKeys,
+      onChange: this.onSelectChange,
+    };
     return (
       <Fragment>
         <Searchbar parent={this.search} option={this.option}></Searchbar>
-        <Table data={data}></Table>
+        <Table
+          rowSelection={rowSelection}
+          dataSource={data}
+          columns={this.collumns}
+          pagination={false}
+        ></Table>
+
         <Pagination count={count} child={this.paginChange}></Pagination>
       </Fragment>
     );

@@ -7,14 +7,13 @@ export const CountContext = createContext(0);
 export default function index() {
   const [count, setCount] = useState(1);
   let [name, setName] = useState('张三');
-  // useEffect(() => {
-  //   document.title = `You clicked ${count} times`;
-  //   console.log(`useEffect=>You clicked ${name} times`);
-  //   return () => {
-  //     console.log('老弟，你走了!Index页面')
-  //   }
-  // })
-  //
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+    console.log(`useEffect=>You clicked ${name} times`);
+    return () => {
+      console.log('老弟，你走了!Index页面');
+    };
+  });
 
   return (
     <div>
@@ -34,7 +33,7 @@ export default function index() {
       <p>名称{name}</p>
       <Button
         onClick={() => {
-          setName(name + 'esss');
+          setName(name + 'hhah');
         }}
       >
         点击

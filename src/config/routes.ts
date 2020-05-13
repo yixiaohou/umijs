@@ -1,6 +1,6 @@
 export default [
   {
-    path: 'login',
+    path: '/login',
     component: '@/pages/login/index',
   },
   {
