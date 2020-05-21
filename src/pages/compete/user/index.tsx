@@ -1,12 +1,17 @@
 import React, { Component, Fragment } from 'react';
-import { message, Button, notification, Space, Table } from 'antd';
+import { message, Button, notification, Modal, Space, Table } from 'antd';
 // import Searchbar from 'components/searchbar/Searchbar';
 import Searchbar from '@/components/Searchbar/index';
 import { HttpService } from '@/utils/httpService';
 import Pagination from '@/components/Pagination';
 import { SearchType, SearchItemWithDatasource } from '@/components/Searchbar';
+import { ExclamationCircleOutlined } from '@ant-design/icons';
+
+const { confirm } = Modal;
 export default class index extends React.Component {
   componentDidMount() {}
+
+  selectRows = [];
   state = {
     data: [],
     page_no: 1,
@@ -113,15 +118,40 @@ export default class index extends React.Component {
   getUserInfo() {
     HttpService.getUser?.requset(this.parmes)?.then(res => {
       this.setState({
-        data: res.rows,
+        data: res.rows.map((item, index) => {
+          item['key'] = index;
+          return item;
+        }),
         count: res.count,
         pageSize: this.parmes.page_size,
       });
     });
   }
-
+  betch() {
+    console.log(this.selectRows);
+    confirm({
+      title: '删除选中的用户?',
+      icon: <ExclamationCircleOutlined />,
+      content: this.selectRows.map(item => `${item.name},`),
+      onOk: () => {
+        return new Promise((resolve, reject) => {
+          HttpService['updateBatchUser'].requset(this.selectRows).then(res => {
+            console.log(res);
+            this.getUserInfo();
+            resolve(true);
+          });
+        });
+      },
+      onCancel() {
+        console.log('Cancel');
+      },
+    });
+  }
   onSelectChange = (selectedRowKeys, selectRows) => {
     console.log('selectedRowKeys changed: ', selectedRowKeys);
+    console.log(selectRows);
+    // selectedRowKeys = selectRows;
+    this.selectRows = selectRows;
     this.setState({ selectedRowKeys });
   };
 
@@ -134,6 +164,7 @@ export default class index extends React.Component {
     return (
       <Fragment>
         <Searchbar parent={this.search} option={this.option}></Searchbar>
+        <Button onClick={() => this.betch()}>批量操作</Button>
         <Table
           rowSelection={rowSelection}
           dataSource={data}
