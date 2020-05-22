@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import { message, Button, notification, Modal, Space, Table } from 'antd';
+import { Button, notification, Modal, Space, Table } from 'antd';
 // import Searchbar from 'components/searchbar/Searchbar';
 import Searchbar from '@/components/Searchbar/index';
+import Btnbar from '@/components/BtnArea/index';
 import { HttpService } from '@/utils/httpService';
 import Pagination from '@/components/Pagination';
 import { SearchType, SearchItemWithDatasource } from '@/components/Searchbar';
@@ -100,12 +101,13 @@ export default class index extends React.Component {
 
   delUser(text, record) {
     console.log(text);
+
     console.log(record);
   }
 
   search = (ref: any) => {
     console.log(ref);
-    console.log(this.option);
+    this.parmes.search = ref || {};
     this.getUserInfo();
   };
 
@@ -130,14 +132,14 @@ export default class index extends React.Component {
   betch() {
     console.log(this.selectRows);
     confirm({
-      title: '删除选中的用户?',
+      title: '修改选中的用户?',
       icon: <ExclamationCircleOutlined />,
       content: this.selectRows.map(item => `${item.name},`),
       onOk: () => {
         return new Promise((resolve, reject) => {
           HttpService['updateBatchUser'].requset(this.selectRows).then(res => {
-            console.log(res);
             this.getUserInfo();
+            notification.success({ message: res });
             resolve(true);
           });
         });
@@ -148,9 +150,6 @@ export default class index extends React.Component {
     });
   }
   onSelectChange = (selectedRowKeys, selectRows) => {
-    console.log('selectedRowKeys changed: ', selectedRowKeys);
-    console.log(selectRows);
-    // selectedRowKeys = selectRows;
     this.selectRows = selectRows;
     this.setState({ selectedRowKeys });
   };
@@ -161,10 +160,11 @@ export default class index extends React.Component {
       selectedRowKeys,
       onChange: this.onSelectChange,
     };
+    const btn = <Button onClick={() => this.betch()}>修改用户状态</Button>;
     return (
       <Fragment>
         <Searchbar parent={this.search} option={this.option}></Searchbar>
-        <Button onClick={() => this.betch()}>批量操作</Button>
+        <Btnbar children={btn}></Btnbar>
         <Table
           rowSelection={rowSelection}
           dataSource={data}

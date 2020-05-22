@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { message, Button, Input, Row, Col, Select } from 'antd';
+import style from './index.less';
 
 export enum SearchType {
   input = 0,
@@ -18,7 +19,7 @@ interface InitList {
   name: string;
   code: string | number | boolean;
 }
-
+const { Option } = Select;
 export class SearchItemWithDatasource {
   type!: SearchType;
   label?: string;
@@ -43,18 +44,9 @@ export default class index extends Component<any> {
     this.query();
   }
 
-  private usertype = [
-    { name: '牵牛花运营', code: '1' },
-    { name: '总部用户', code: '2' },
-    { name: '门店用户', code: '3' },
-    { name: '牵牛花开发', code: '4' },
-    { name: '拣货助手', code: '-10000' },
-    { name: '数据大盘', code: '-20000' },
-  ];
-  private status = [
-    { name: '启用', code: '1' },
-    { name: '停用', code: '-1' },
-  ];
+  reset(option: Array<any> = []) {
+    console.log(option);
+  }
 
   query(option: Array<any> = []) {
     if (option.length === 0) {
@@ -63,15 +55,13 @@ export default class index extends Component<any> {
     }
 
     let emitObj: any = {};
-    console.log(option[0].valueKey.state.value);
     option.forEach(item => {
       switch (item.type) {
         case SearchType.input:
-          console.log(item);
           emitObj[item.nameKey] = item.valueKey.state.value;
           break;
         case SearchType.select:
-          emitObj[item.nameKey] = item;
+          emitObj[item.nameKey] = item.valueKey;
           break;
         case SearchType.doubleSelect:
           emitObj[item.doubleSelectList[0].name] =
@@ -140,38 +130,52 @@ export default class index extends Component<any> {
     return (
       <Fragment>
         {
-          <Row>
-            {option.map((item, index) => {
-              if (item.type === 0) {
-                return (
-                  <Col span="8" key={index}>
-                    <label>{item.label}</label>
-                    <Input
-                      // ref={input => {
-                      //   if (input && input.state && input.state.value) {
-                      //     item.valueKey = input.state.value
-                      //   }
-                      // }}
-                      ref={input => (item.valueKey = input)}
-                      placeholder={
-                        item.placeholder
-                          ? item.placeholder
-                          : `请输入${item.label}`
-                      }
-                    />
-                  </Col>
-                );
-              }
-              // if (item.type === 0) {
-              //   return (
-
-              //   )
-
-              // }
-            })}
+          <Row className={style.searchBox}>
+            <Col span="20">
+              <Row>
+                {option.map((item: SearchItemWithDatasource, index) => {
+                  return (
+                    <Col span="8" key={index}>
+                      <label className={style.label}>{item.label}</label>
+                      {item.type === 0 ? (
+                        <Input
+                          className={style.searchItem}
+                          ref={input => (item.valueKey = input)}
+                          placeholder={
+                            item.placeholder
+                              ? item.placeholder
+                              : `请输入${item.label}`
+                          }
+                        />
+                      ) : item.type === 1 ? (
+                        <Select
+                          className={style.searchItem}
+                          onChange={event => (item.valueKey = event)}
+                        >
+                          {item.initList
+                            ? item.initList.map((item2, index) => (
+                                <Option key={index} value={item2.code}>
+                                  {item2.name}
+                                </Option>
+                              ))
+                            : null}
+                        </Select>
+                      ) : null}
+                    </Col>
+                  );
+                })}
+              </Row>
+            </Col>
+            <Col span="4">
+              <Button type="primary" onClick={() => this.query(option)}>
+                查询
+              </Button>
+              <Button type="default" onClick={() => this.reset(option)}>
+                重置
+              </Button>
+            </Col>
           </Row>
         }
-        <Button onClick={() => this.query(option)}>查询</Button>
       </Fragment>
     );
   }
