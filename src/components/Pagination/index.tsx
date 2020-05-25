@@ -7,8 +7,6 @@ interface Props {
 }
 export default class index extends Component<Props> {
   changeNum = (page: number, pageSize: number | undefined) => {
-    // console.log(res);
-    console.log(page, pageSize);
     this.props.child(page, pageSize);
   };
   changeSize = (current: number, size: number) => {

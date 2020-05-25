@@ -7,6 +7,7 @@ import { HttpService } from '@/utils/httpService';
 import Pagination from '@/components/Pagination';
 import { SearchType, SearchItemWithDatasource } from '@/components/Searchbar';
 import { ExclamationCircleOutlined } from '@ant-design/icons';
+import { ParamsBody } from '@/components/BaseModel';
 
 const { confirm } = Modal;
 export default class index extends React.Component {
@@ -56,13 +57,7 @@ export default class index extends React.Component {
     },
   ];
 
-  private parmes = {
-    page_no: 1,
-    page_size: 20,
-    sortDirKey: 'DESC',
-    sort: 'code',
-    search: { code: '', name: '', usertype: '', status: '', rolecode: '' },
-  };
+  private parmes = new ParamsBody();
   private collumns = [
     { key: 'code', title: '用户名', dataIndex: 'code' },
     { key: 'name', title: '姓名', dataIndex: 'name' },
@@ -106,7 +101,6 @@ export default class index extends React.Component {
   }
 
   search = (ref: any) => {
-    console.log(ref);
     this.parmes.search = ref || {};
     this.getUserInfo();
   };
@@ -130,7 +124,6 @@ export default class index extends React.Component {
     });
   }
   betch() {
-    console.log(this.selectRows);
     confirm({
       title: '修改选中的用户?',
       icon: <ExclamationCircleOutlined />,
@@ -141,6 +134,7 @@ export default class index extends React.Component {
             this.getUserInfo();
             notification.success({ message: res });
             resolve(true);
+            reject(false);
           });
         });
       },

@@ -36,7 +36,6 @@ export class SearchItemWithDatasource {
   emitFun?: any;
   importent?: boolean;
   placeholder?: string;
-  selectedvalue?: any; // 门店稽核专用
 }
 
 export default class index extends Component<any> {
