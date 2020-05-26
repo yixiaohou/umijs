@@ -918,17 +918,11 @@
       "method": "post",
       "url": "http://dev-om.m-glory.net/qnh-operate-bsp/bsp/bspmddata/one/onegoodsonoff"
     },
-    "getMenusData": {
-      "code": "getMenusData",
+    "getMenus": {
+      "code": "getMenus",
       "name": "获取菜单全部信息",
       "method": "post",
       "url": "http://dev.m-glory.net/qnh-account-bsp/menu/menuList"
-    },
-    "getMenusDataPro": {
-      "code": "getMenusData",
-      "name": "获取菜单全部信息",
-      "method": "post",
-      "url": "http://www.m-glory.net/qnh-account-bsp/menu/menuList"
     },
     "addMenu": {
       "code": "addMenu",

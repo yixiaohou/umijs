@@ -3,15 +3,11 @@
  */
 class LoginParameterModel {
   // 用户名
-  // 用户名
   code!: string;
-  // 密码
   // 密码
   pwd!: string;
   // 系统编码
-  // 系统编码
   system!: string;
-  // 门店
   // 门店
   store!: string;
 }

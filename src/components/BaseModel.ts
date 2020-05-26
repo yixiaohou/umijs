@@ -19,11 +19,11 @@ export class ParamsBody implements PageParams {
   page_no: number;
   sort?: string;
   sortDirKey?: string;
-  search: Object;
+  search: Object | undefined | null;
   count: number;
   rowno: number;
   constructor(
-    search?: Object,
+    search?: Object | undefined | null,
     pageSize?: number,
     pageNo?: number,
     sort?: string,

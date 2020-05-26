@@ -49,7 +49,7 @@ export default class API {
     },
   });
 
-  requset = (data: Object) => {
+  requset = (data: any = null) => {
     if (this.apidic.method === 'post') {
       return this.requestOner
         .post(this.apidic.url, { data: data })
