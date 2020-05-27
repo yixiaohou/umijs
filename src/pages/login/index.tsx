@@ -12,23 +12,29 @@ const tailLayout = {
 };
 
 export default function index(props: { children: any }) {
-  const onFinish: any = (values: { username: any; password: any }) => {
-    console.log(HttpService);
-    console.log('Success:', values);
-
+  const onFinish: any = async (values: { username: any; password: any }) => {
     let opt = {
       code: values.username,
       pwd: values.password,
       remember: true,
       system: 'bsp2-ng',
     };
-    HttpService.getToken(opt)?.then(res => {
-      if (res.code === 1) {
-        setToken(res.data.token);
-        history.push('/');
-      }
+    let res = await getToken(opt);
+
+    if (res['code'] === 1) {
+      setToken(res.data.token);
+      history.push('/');
+    }
+  };
+
+  const getToken = opt => {
+    return new Promise((resolve, reject) => {
+      HttpService.getToken(opt)?.then(res => {
+        resolve(res);
+      });
     });
   };
+
   const onFinishFailed = (errorInfo: any) => {
     console.log('Faile2222d:', errorInfo);
   };

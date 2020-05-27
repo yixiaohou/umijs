@@ -21,15 +21,26 @@ export function setToken(data: string) {
 export function getToken() {
   return localStorage.getItem(token);
 }
+// 设置用户信息
+export const setUserInfo = (info: Userinfo) => {
+  if (info && info.exp) {
+    localStorage.setItem(timeoutKey, info.exp.toString());
+    localStorage.setItem(userInfo, JSON.stringify(info));
+  }
+};
+
+export const getTimeout = () => {
+  return Number(localStorage.getItem(timeoutKey)) || 0;
+};
+
+export const cleanLoginInfo = () => {
+  const keys = [token, userInfo, timeoutKey];
+  keys.forEach(key => {
+    localStorage.removeItem(key);
+  });
+};
 
 export class LocalStorageService {
-  // 设置用户信息
-  public setUserInfo(info: Userinfo) {
-    if (info && info.exp) {
-      localStorage.setItem(timeoutKey, info.exp.toString());
-      localStorage.setItem(userInfo, JSON.stringify(info));
-    }
-  }
   // 获取用户信息
   public getUserInfo() {
     const info = localStorage.getItem(userInfo);
@@ -45,14 +56,6 @@ export class LocalStorageService {
   }
   // 获取用户信息
   public getToken = () => localStorage.getItem(token);
-
-  // 清除所有用户信息
-  public cleanLoginInfo() {
-    const keys = [token, userInfo, timeoutKey];
-    keys.forEach(key => {
-      localStorage.removeItem(key);
-    });
-  }
 
   // 设置时间戳
   public setTimeout(time: string) {

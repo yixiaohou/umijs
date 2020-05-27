@@ -5,6 +5,8 @@ import { LocalStorageService } from './localStorage';
 export class HttpService {
   static getUser: API | undefined;
   static getMenus: API | undefined;
+  static apiTokenValidate: API | undefined;
+
   static isinited = true;
   constructor() {}
 
